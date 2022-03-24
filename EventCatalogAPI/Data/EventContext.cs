@@ -9,6 +9,10 @@ namespace EventCatalogAPI.Data
 {
     public class EventContext : DbContext
     {
+        // Dependency Injection
+        public EventContext(DbContextOptions options) : base(options)
+        { }
+
         public DbSet<EventType> EventTypes { get; set; }
         public DbSet<EventCategory> EventCategories { get; set; }
         public DbSet<EventMetroCity> EventMetroCities { get; set; }
@@ -84,7 +88,7 @@ namespace EventCatalogAPI.Data
 
                 e.Property(f => f.Price)
                     .IsRequired()
-                    .HasMaxLength(20);
+                    .HasPrecision(10,2);
 
                 e.Property(f => f.RefundPolicy)
                     .IsRequired()
