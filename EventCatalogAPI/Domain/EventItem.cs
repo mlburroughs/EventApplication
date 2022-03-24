@@ -21,15 +21,14 @@ namespace EventCatalogAPI.Domain
         public List<string> Tags { get; set; }
 
         public int EventTypeId { get; set; }
-        public virtual EventType EventType { get; set; }
-
         public int EventCategoryId { get; set; }
-        public virtual EventCategory EventCategory { get; set; }
-
         public int EventMetroCityId { get; set; }
-        public virtual EventMetroCity EventMetroCity { get; set; }
-
         public int EventOrganizerId { get; set; }
-        public EventOrganizer EventOrganizerName { get; set; }
+
+        //Navigational Properties
+        public virtual EventType EventType { get; set; }
+        public virtual EventCategory EventCategory { get; set; }
+        public virtual EventMetroCity EventMetroCity { get; set; }
+        public virtual EventOrganizer EventOrganizer { get; set; }
     }
 }
