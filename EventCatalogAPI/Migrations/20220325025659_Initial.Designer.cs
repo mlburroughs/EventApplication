@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventCatalogAPI.Migrations
 {
     [DbContext(typeof(EventContext))]
-    [Migration("20220324224910_Initial")]
+    [Migration("20220325025659_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,9 +28,10 @@ namespace EventCatalogAPI.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Category")
+                    b.Property<string>("Category")
+                        .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
@@ -66,6 +67,9 @@ namespace EventCatalogAPI.Migrations
 
                     b.Property<int>("EventCategoryId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("EventDateTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("EventMetroCityId")
                         .HasColumnType("int");
@@ -131,8 +135,8 @@ namespace EventCatalogAPI.Migrations
 
                     b.Property<string>("MetroCity")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(40)
+                        .HasColumnType("nvarchar(40)");
 
                     b.HasKey("Id");
 

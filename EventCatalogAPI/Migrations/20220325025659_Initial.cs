@@ -13,7 +13,7 @@ namespace EventCatalogAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Category = table.Column<int>(type: "int", maxLength: 50, nullable: false)
+                    Category = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,7 +26,7 @@ namespace EventCatalogAPI.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    MetroCity = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false)
+                    MetroCity = table.Column<string>(type: "nvarchar(40)", maxLength: 40, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -70,6 +70,7 @@ namespace EventCatalogAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    EventDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", maxLength: 20, nullable: false),
                     Time = table.Column<DateTime>(type: "datetime2", maxLength: 20, nullable: false),
                     MainEventImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),

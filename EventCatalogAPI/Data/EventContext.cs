@@ -51,7 +51,7 @@ namespace EventCatalogAPI.Data
 
                 e.Property(c => c.MetroCity)
                     .IsRequired()
-                    .HasMaxLength(20);
+                    .HasMaxLength(40);
             });
 
             modelBuilder.Entity<EventOrganizer>(e =>
