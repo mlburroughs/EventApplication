@@ -292,9 +292,164 @@ namespace EventCatalogAPI.Data
                               EventCategoryId=4,
                               EventMetroCityId=25,
                               EventOrganizerId=5
+                              },
+
+                new EventItem{Name="North End Pasta-Making Class",
+                              Description="Learn from Italian-trained chefs and craft exciting pasta dishes from scratch! Perfect date night!",
+                              EventDateTime = new DateTime(2022, 12, 1, 17, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/11",
+                              Price=25.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Food",
+                              Tag2="Italian",
+                              Tag3="Cooking Class",
+                              EventTypeId=16,
+                              EventCategoryId=8,
+                              EventMetroCityId=7,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Napa Wine Harvest Festival",
+                              Description="Celebrate the end of the grape-harvesting season with local music, food, and crafts",
+                              EventDateTime = new DateTime(2022, 10, 11, 12, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/12",
+                              Price=9.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Wine",
+                              EventTypeId=11,
+                              EventCategoryId=4,
+                              EventMetroCityId=12,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Oktoberfest 2022",
+                              Description="Beer, food, and more beer! Ticket includes T-shirt, souvenir pint, and voucher for food",
+                              EventDateTime = new DateTime(2022, 9, 29, 13, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/13",
+                              Price=29.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Oktoberfest",
+                              Tag2="Beer",
+                              EventTypeId=11,
+                              EventCategoryId=8,
+                              EventMetroCityId=16,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Fourth of July Fireworks",
+                              Description= "Watch fireworks overlooking Utah Lake, starts at dark.",
+                              EventDateTime = new DateTime(2022, 7, 4, 21, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/14",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="fireworks",
+                              Tag2="fourth of july",
+                              EventTypeId=8,
+                              EventCategoryId=19,
+                              EventMetroCityId=3,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="End of Year Book Sale",
+                              Description="Amazing discounts on surplus books in this once-a-year event",
+                              EventDateTime = new DateTime(2022, 8, 12, 8, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/15",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="books",
+                              EventTypeId=8,
+                              EventCategoryId=14,
+                              EventMetroCityId=13,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Playdoh Making Class",
+                              Description="For children and their families: learn how to make your own fun while " +
+                              "learning about chemistry! Ages 6+. Price per child",
+                              EventDateTime = new DateTime(2022, 9, 16, 12, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/16",
+                              Price=14.50M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="children",
+                              EventTypeId=16,
+                              EventCategoryId=5,
+                              EventMetroCityId=8,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Young Adult Camping Trip",
+                              Description="Meet other young adults while camping in the beautiful Appalachian Mountains. " +
+                              "Don't forget the bear spray! Ticket includes private tent rental, all meals, and guided hike. " +
+                              "Ages 18-25 Welcome.",
+                              EventDateTime = new DateTime(2022, 7, 29, 8, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/17",
+                              Price=125.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Camping",
+                              Tag2="Nature",
+                              EventTypeId=17,
+                              EventCategoryId=21,
+                              EventMetroCityId=8,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Mother's Day Afternoon Tea",
+                              Description="Enjoy Mother's Day with a decedent afternoon tea. Includes sandwiches, scones, " +
+                              "mini paterissies, as well as tea selection from expansive menu. Champagne extra $10.",
+                              EventDateTime = new DateTime(2022, 5, 8, 14, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/18",
+                              Price=69.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Tea",
+                              Tag2="Mother's Day 2022",
+                              EventTypeId=7,
+                              EventCategoryId=8,
+                              EventMetroCityId=4,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Making The Perfect Cannoli: A Night With Chef Botti",
+                              Description="Learn about the history of the infamous italian pastry" +
+                              " with Chef Botti - world renowned pastry chef. Admission includes voucher to Botti's Patries",
+                              EventDateTime = new DateTime(2022, 11, 1, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/19",
+                              Price=9.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Pastry",
+                              Tag2="Italian",
+                              EventTypeId=3,
+                              EventCategoryId=8,
+                              EventMetroCityId=7,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Tetris World Championship",
+                              Description="The best of best compete for the title of best player in this icon game.",
+                              EventDateTime = new DateTime(2022, 7, 11, 11, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/20",
+                              Price=250.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
+                              Tag2= "Tetris",
+                              EventTypeId=10,
+                              EventCategoryId=7,
+                              EventMetroCityId=14,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Pike Place Market Tour",
+                              Description="Explore shops and stalls while learning about this famous " +
+                              "Seattle landmark",
+                              EventDateTime = new DateTime(2022, 6, 12, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/10",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
+                              EventTypeId=2,
+                              EventCategoryId=4,
+                              EventMetroCityId=25,
+                              EventOrganizerId=5
                               }
-
-
             };
         }
 
