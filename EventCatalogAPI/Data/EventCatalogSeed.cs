@@ -221,27 +221,10 @@ namespace EventCatalogAPI.Data
                               Tag2="Space",
                               Tag3="Telescope",
                               Tag4="James Webb",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
-                              },
-
-                new EventItem{Name="Designing the James Webb Telescope",
-                              Description="Join us for an evening with NASA's chief scientist to discover " +
-                              "the history, present state in orbit, and future expectations of the James Webb Telescope.",
-                              EventDateTime = new DateTime(2022, 6, 1, 19, 30, 0),
-                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/5",
-                              Price=24.50M,
-                              RefundPolicy="Placeholder",//come back
-                              Tag1="Technology",
-                              Tag2="Space",
-                              Tag3="Telescope",
-                              Tag4="James Webb",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=3,
+                              EventCategoryId=18,
+                              EventMetroCityId=14,
+                              EventOrganizerId=5
                               },
 
                 new EventItem{Name="Tour de Boise",
@@ -251,9 +234,9 @@ namespace EventCatalogAPI.Data
                               Price=129.50M,
                               RefundPolicy="Placeholder",//come back
                               Tag1="Race",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
+                              EventTypeId=6,
+                              EventCategoryId=20,
+                              EventMetroCityId=6,
                               EventOrganizerId=4
                               },
 
@@ -265,10 +248,10 @@ namespace EventCatalogAPI.Data
                               RefundPolicy="Placeholder",//come back
                               Tag1="Music",
                               Tag2="Art",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=11,
+                              EventCategoryId=13,
+                              EventMetroCityId=23,
+                              EventOrganizerId=5
                               },
 
                 new EventItem{Name="Country Music Concert",
@@ -278,10 +261,10 @@ namespace EventCatalogAPI.Data
                               Price=59.50M,
                               RefundPolicy="Placeholder",//come back
                               Tag1="Music",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=15,
+                              EventCategoryId=13,
+                              EventMetroCityId=17,
+                              EventOrganizerId=5
                               },
 
                 new EventItem{Name="Women in Technology Meetup",
@@ -291,10 +274,10 @@ namespace EventCatalogAPI.Data
                               Price=0.00M,
                               RefundPolicy="Placeholder",//come back
                               Tag1="Technology",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=9,
+                              EventCategoryId=2,
+                              EventMetroCityId=25,
+                              EventOrganizerId=5
                               },
 
                 new EventItem{Name="Pike Place Market Tour",
@@ -305,10 +288,10 @@ namespace EventCatalogAPI.Data
                               Price=0.00M,
                               RefundPolicy="Placeholder",//come back
                               Tag1="Technology",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=2,
+                              EventCategoryId=4,
+                              EventMetroCityId=25,
+                              EventOrganizerId=5
                               }
 
 
