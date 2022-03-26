@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,10 @@ namespace EventCatalogAPI.Controllers
             
         }
         [HttpGet("action")]
-        public async Task<IActionResult> EventCategories() // the name of the thread
+        public async Task<IActionResult> EventCategories() //The name of the thread
         {
-            //This task ( thread)will query the data base and get all the event categories and converet them to a list 
-            var categories =await _context.EventCategories.ToListAsync();
+            //This task (thread) will query the data base and get all the event categories and convert them to a list 
+            var categories = await _context.EventCategories.ToListAsync();
             return Ok(categories);
 
         }
