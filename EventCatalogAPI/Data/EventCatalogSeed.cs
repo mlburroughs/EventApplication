@@ -155,7 +155,7 @@ namespace EventCatalogAPI.Data
                 new EventItem{Name="5th Annual Seattle Tulip Festival",
                               Description="Join us for the 5th Annual Tulip Festival!",
                               EventDateTime = new DateTime(2022, 05, 27, 10, 0, 0),
-                              MainEventImageUrl ="Placeholder",//come back
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/1",
                               Price=12.99M,
                               RefundPolicy="Placeholder",//come back
                               Tag1="Flowers",
@@ -164,7 +164,114 @@ namespace EventCatalogAPI.Data
                               EventCategoryId=7,
                               EventMetroCityId=12,
                               EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Midwest Marathon",
+                              Description="Run the streets of Chicago!",
+                              EventDateTime = new DateTime(2022, 08, 20, 6, 0, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/2",
+                              Price=79.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Marathon",
+                              Tag2="Run",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="South Bay Hackathon",
+                              Description="Compete for $5000 prize, network, and meet exciting tech companies looking for talented developers. " +
+                                          "Price includes admission, swag, and catered lunch.",
+                              EventDateTime = new DateTime(2022, 07, 1, 11, 0, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/3",
+                              Price=29.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
+                              Tag2="Hackathon",
+                              Tag3="Programming",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Winter Holiday Market",
+                              Description="FREE ADMISSION. Find holidayc gifts form a variety of local vendors",
+                              EventDateTime = new DateTime(2022, 12, 4, 12, 0, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/4",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Winter",
+                              Tag2="Shopping",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Designing the James Webb Telescope",
+                              Description="Join us for an evening with NASA's chief scientist to discover " +
+                              "the history, present state in orbit, and future expectations of the James Webb Telescope.",
+                              EventDateTime = new DateTime(2022, 6, 1, 7, 30, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/5",
+                              Price=24.50M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
+                              Tag2="Space",
+                              Tag3="Telescope",
+                              Tag4="James Webb",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Designing the James Webb Telescope",
+                              Description="Join us for an evening with NASA's chief scientist to discover " +
+                              "the history, present state in orbit, and future expectations of the James Webb Telescope.",
+                              EventDateTime = new DateTime(2022, 6, 1, 19, 30, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/5",
+                              Price=24.50M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
+                              Tag2="Space",
+                              Tag3="Telescope",
+                              Tag4="James Webb",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Tour de Boise",
+                              Description="Idaho's cycling event of the year.",
+                              EventDateTime = new DateTime(2022, 10, 18, 5, 30, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/6",
+                              Price=129.50M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Race",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Portland Music and Art Festival",
+                              Description="Variety of music, vendors, and art exhibits showcasing Portland's local talent.",
+                              EventDateTime = new DateTime(2022, 8, 1, 14, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/7",
+                              Price=29.50M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Music",
+                              Tag2="Art",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
                               }
+
+
             };
         }
 
