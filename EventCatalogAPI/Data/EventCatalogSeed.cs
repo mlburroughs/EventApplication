@@ -437,11 +437,105 @@ namespace EventCatalogAPI.Data
                               EventOrganizerId=5
                               },
 
-                new EventItem{Name="Pike Place Market Tour",
-                              Description="Explore shops and stalls while learning about this famous " +
-                              "Seattle landmark",
+                new EventItem{Name="French Quarter Tour",
+                              Description="Explore the food, shops, and secrets of this historic distict on " +
+                              "this guided walking tour",
+                              EventDateTime = new DateTime(2022, 5, 29, 13, 30, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/21",
+                              Price=24.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="French Quarter",
+                              EventTypeId=2,
+                              EventCategoryId=4,
+                              EventMetroCityId=18,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Kids Day in the Park",
+                              Description="Enjoy games, crafts, and sports. Ages 5-10.",
                               EventDateTime = new DateTime(2022, 6, 12, 18, 00, 0),
-                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/10",
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/22",
+                              Price=4.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Children",
+                              EventTypeId=7,
+                              EventCategoryId=21,
+                              EventMetroCityId=10,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Wellness Seminar: Sauna",
+                              Description="Explore the benefits of saunas to promote weight loss, relaxation, and muscle recovery.",
+                              EventDateTime = new DateTime(2022, 10, 3, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/23",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="wellness",
+                              EventTypeId=3,
+                              EventCategoryId=11,
+                              EventMetroCityId=16,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Halloween Crafting",
+                              Description="Family friendly acitivty making mini pumpkin decorations. Price includes materials.",
+                              EventDateTime = new DateTime(2022, 10, 31, 15, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/24",
+                              Price=14.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Halloween",
+                              EventTypeId=16,
+                              EventCategoryId=19,
+                              EventMetroCityId=1,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Save The Killer Whales",
+                              Description="Save the killer whales who call the Puget Sound home by protesting construction of factory outside City Hall. " +
+                              "Please make signs and T-Shirts!",
+                              EventDateTime = new DateTime(2022, 6, 1, 7, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/25",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Save the Killer Whales",
+                              EventTypeId=5,
+                              EventCategoryId=9,
+                              EventMetroCityId=25,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Cello Concert",
+                              Description="Enjoy a night with your favorite stirng instrument.",
+                              EventDateTime = new DateTime(2022, 9, 3, 20, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/26",
+                              Price=19.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Classical Music",
+                              Tag2="Cello",
+                              EventTypeId=15,
+                              EventCategoryId=13,
+                              EventMetroCityId=19,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Piano Concert",
+                              Description="Enjoy the music of French composer Chopin in this one night special event.",
+                              EventDateTime = new DateTime(2022, 6, 1, 19, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/27",
+                              Price=29.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Classical Music",
+                              Tag2="Piano",
+                              EventTypeId=15,
+                              EventCategoryId=13,
+                              EventMetroCityId=10,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="5K Run for a Cure",
+                              Description="Run to bring awareness to this disease",
+                              EventDateTime = new DateTime(2022, 6, 10, 6, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/28",
                               Price=0.00M,
                               RefundPolicy="Placeholder",//come back
                               Tag1="Technology",
@@ -449,7 +543,34 @@ namespace EventCatalogAPI.Data
                               EventCategoryId=4,
                               EventMetroCityId=25,
                               EventOrganizerId=5
-                              }
+                              },
+
+                new EventItem{Name="2022 Women in Computing Conference",
+                              Description="WCC provides workshops, networking opportunities, mock interviews, and " +
+                              "an exciting keynote speaker from CTO of C Technologies.",
+                              EventDateTime = new DateTime(2022, 8, 1, 9, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/29",
+                              Price=79.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Women in Technology",
+                              EventTypeId=14,
+                              EventCategoryId=2,
+                              EventMetroCityId=9,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Clean Energy Expo",
+                              Description="Learn about exciting new products in clean energy",
+                              EventDateTime = new DateTime(2022, 10, 1, 10, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/30",
+                              Price=10.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Clean Energy",
+                              EventTypeId=20,
+                              EventCategoryId=19,
+                              EventMetroCityId=15,
+                              EventOrganizerId=5
+                              },
             };
         }
 
