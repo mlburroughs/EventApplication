@@ -160,10 +160,10 @@ namespace EventCatalogAPI.Data
                               RefundPolicy="Placeholder",//come back
                               Tag1="Flowers",
                               Tag2="Family Friendly",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=11,
+                              EventCategoryId=4,
+                              EventMetroCityId=25,
+                              EventOrganizerId=2
                               },
 
                 new EventItem{Name="Midwest Marathon",
@@ -174,9 +174,9 @@ namespace EventCatalogAPI.Data
                               RefundPolicy="Placeholder",//come back
                               Tag1="Marathon",
                               Tag2="Run",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
+                              EventTypeId=6,
+                              EventCategoryId=20,
+                              EventMetroCityId=9,
                               EventOrganizerId=4
                               },
 
@@ -190,10 +190,10 @@ namespace EventCatalogAPI.Data
                               Tag1="Technology",
                               Tag2="Hackathon",
                               Tag3="Programming",
-                              EventTypeId=8,
-                              EventCategoryId=7,
+                              EventTypeId=19,
+                              EventCategoryId=18,
                               EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventOrganizerId=5
                               },
 
                 new EventItem{Name="Winter Holiday Market",
@@ -204,10 +204,10 @@ namespace EventCatalogAPI.Data
                               RefundPolicy="Placeholder",//come back
                               Tag1="Winter",
                               Tag2="Shopping",
-                              EventTypeId=8,
-                              EventCategoryId=7,
-                              EventMetroCityId=12,
-                              EventOrganizerId=4
+                              EventTypeId=11,
+                              EventCategoryId=19,
+                              EventMetroCityId=11,
+                              EventOrganizerId=5
                               },
 
                 new EventItem{Name="Designing the James Webb Telescope",
@@ -265,6 +265,46 @@ namespace EventCatalogAPI.Data
                               RefundPolicy="Placeholder",//come back
                               Tag1="Music",
                               Tag2="Art",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Country Music Concert",
+                              Description="Lineup of 3 award-winning country artists.",
+                              EventDateTime = new DateTime(2023, 3, 1, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/8",
+                              Price=59.50M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Music",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Women in Technology Meetup",
+                              Description="Join us for an evening of networking with other women in tech.",
+                              EventDateTime = new DateTime(2022, 5, 12, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/9",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
+                              EventTypeId=8,
+                              EventCategoryId=7,
+                              EventMetroCityId=12,
+                              EventOrganizerId=4
+                              },
+
+                new EventItem{Name="Pike Place Market Tour",
+                              Description="Explore shops and stalls while learning about this famous " +
+                              "Seattle landmark",
+                              EventDateTime = new DateTime(2022, 6, 12, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/10",
+                              Price=0.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Technology",
                               EventTypeId=8,
                               EventCategoryId=7,
                               EventMetroCityId=12,
