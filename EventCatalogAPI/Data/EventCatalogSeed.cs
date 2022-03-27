@@ -571,6 +571,137 @@ namespace EventCatalogAPI.Data
                               EventMetroCityId=15,
                               EventOrganizerId=5
                               },
+
+                new EventItem{Name="Ballet Company Presents: Swan Lake",
+                              Description="A night at the ballet featuring new principal dancer Tatiana.",
+                              EventDateTime = new DateTime(2022, 10, 1, 19, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/31",
+                              Price=59.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Ballet",
+                              EventTypeId=15,
+                              EventCategoryId=15,
+                              EventMetroCityId=19,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Phantom of the Opera",
+                              Description="A magical, musical evening of Andrew Lloyd Webber's classic story.",
+                              EventDateTime = new DateTime(2022, 11, 5, 9, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/32",
+                              Price=49.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Theatre",
+                              EventTypeId=15,
+                              EventCategoryId=15,
+                              EventMetroCityId=4,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Outdoor Movie in the Park Summer Series",
+                              Description="Family friendly film under the summer stars. Concessions available.",
+                              EventDateTime = new DateTime(2022, 7, 1, 9, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/33",
+                              Price=00.00M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="movie",
+                              EventTypeId=4,
+                              EventCategoryId=7,
+                              EventMetroCityId=2,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="2022 County Fair",
+                              Description="Rides, games, raffles, and more!",
+                              EventDateTime = new DateTime(2022, 8, 6, 10, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/34",
+                              Price=19.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Fair",
+                              EventTypeId=11,
+                              EventCategoryId=4,
+                              EventMetroCityId=22,
+                              EventOrganizerId=3
+                              },
+
+                new EventItem{Name="New Year's Eve Gala",
+                              Description="Join us for an exciting evening as we count down the last moments of 2022",
+                              EventDateTime = new DateTime(2022, 12, 31, 21, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/35",
+                              Price=89.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="New Year's Eve",
+                              EventTypeId=7,
+                              EventCategoryId=19,
+                              EventMetroCityId=2,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Send In The Clowns: A Comedy Event",
+                              Description="Comedy show by your favorite clowns.",
+                              EventDateTime = new DateTime(2022, 10, 29, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/36",
+                              Price=19.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Comedy",
+                              EventTypeId=15,
+                              EventCategoryId=15,
+                              EventMetroCityId=13,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Beatles Tribute Show",
+                              Description="Hear your favorite Beatles songs from this eclectic tribute band",
+                              EventDateTime = new DateTime(2022, 8, 3, 18, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/37",
+                              Price=9.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Bealtes",
+                              EventTypeId=15,
+                              EventCategoryId=13,
+                              EventMetroCityId=24,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="2022 Tech Career Fair",
+                              Description="Find your next employer.",
+                              EventDateTime = new DateTime(2022, 11, 4, 10, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/38",
+                              Price=9.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Tech Careers",
+                              EventTypeId=9,
+                              EventCategoryId=18,
+                              EventMetroCityId=12,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Yoga and Wellness Convention",
+                              Description="Perfect your downward dog and center your chi.",
+                              EventDateTime = new DateTime(2022, 8, 1, 9, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/39",
+                              Price=39.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Wellness",
+                              Tag2="Yoga",
+                              EventTypeId=13,
+                              EventCategoryId=11,
+                              EventMetroCityId=14,
+                              EventOrganizerId=5
+                              },
+
+                new EventItem{Name="Regional Ballroom Competition",
+                              Description="Watch amazing ballroom dancers compete for the $10,000 prize.",
+                              EventDateTime = new DateTime(2022, 9, 20, 2, 00, 0),
+                              MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/40",
+                              Price=9.99M,
+                              RefundPolicy="Placeholder",//come back
+                              Tag1="Ballroom",
+                              EventTypeId=10,
+                              EventCategoryId=15,
+                              EventMetroCityId=15,
+                              EventOrganizerId=5
+                              },
             };
         }
 
