@@ -20,7 +20,7 @@ namespace EventCatalogAPI.Controllers
             _context = context;
             
         }
-        [HttpGet("action")]
+        [HttpGet("[action]")]
         public async Task<IActionResult> EventCategories() //The name of the thread
         {
             //This task (thread) will query the data base and get all the event categories and convert them to a list 
@@ -29,7 +29,7 @@ namespace EventCatalogAPI.Controllers
 
         }
 
-        [HttpGet("action")]
+        [HttpGet("[action]")]
         public async Task<IActionResult> EventTypes()
         {
             var types = await _context.EventTypes.ToListAsync();
