@@ -19,13 +19,13 @@ namespace EventCatalogAPI.Controllers
             _env = env;
 
         }
+
         [Route ("{id}")]
         [HttpGet]
-
         public IActionResult GetImage(int id)
         {
             var webroot = _env.WebRootPath;
-            var path=Path.Combine($"{webroot}/Pics/",$"Ring{id}.jpg");
+            var path=Path.Combine($"{webroot}/Pics/",$"event{id}.jpg");
             var buffer =System.IO.File.ReadAllBytes(path);
 
             return File(buffer,"image/jpeg");

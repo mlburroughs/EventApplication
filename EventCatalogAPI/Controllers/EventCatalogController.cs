@@ -52,15 +52,15 @@ namespace EventCatalogAPI.Controllers
 
         [HttpGet("[action]")]
         public async Task<IActionResult> EventItem(
-            [FromQuery] int pageIndex = 0,
-            [FromQuery] int pageSize = 6)
+            [FromQuery]int pageIndex=0, 
+            [FromQuery]int pageSize=6)
         {
-            var items = await _context.Events
+            var items= await _context.Events
                  .OrderBy(e => e.EventMetroCity)
                  .Skip(pageIndex * pageSize)
                  .Take(pageSize)
                  .ToListAsync();
-
+             
             return Ok(items);
         }
 
