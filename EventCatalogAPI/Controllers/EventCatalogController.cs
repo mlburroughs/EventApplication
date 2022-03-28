@@ -36,5 +36,33 @@ namespace EventCatalogAPI.Controllers
             return Ok(types);
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> EventMetroCity()
+        {
+            var cities = await _context.EventMetroCities.ToListAsync();
+            return Ok(cities);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> EventOrganizer()
+        {
+            var organizers = await _context.EventOrganizers.ToListAsync();
+            return Ok(organizers);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> EventItem(
+            [FromQuery]int pageIndex=0, 
+            [FromQuery]int pageSize=6)
+        {
+            var items= await _context.Events
+                 .OrderBy(e => e.EventMetroCity)
+                 .Skip(pageIndex * pageSize)
+                 .Take(pageSize)
+                 .ToListAsync();
+             
+            return Ok(items);
+        }
+
     }
 }
