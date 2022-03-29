@@ -1,4 +1,5 @@
 ﻿using EventCatalogAPI.Data;
+using EventCatalogAPI.Domain;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,9 +16,12 @@ namespace EventCatalogAPI.Controllers
     public class EventCatalogController : ControllerBase
     {
         private readonly EventContext _context;
-        public EventCatalogController(EventContext context)
+        private readonly IConfiguration _config;
+
+        public EventCatalogController(EventContext context,IConfiguration configuration)
         {
             _context = context;
+            _config = configuration;
 
         }
         [HttpGet("[action]")]
@@ -60,9 +64,19 @@ namespace EventCatalogAPI.Controllers
                  .Skip(pageIndex * pageSize)
                  .Take(pageSize)
                  .ToListAsync();
-             
+
+            items= ChangePictureUrl(items);
             return Ok(items);
+            
         }
 
+        private List<EventItem> ChangePictureUrl(List<EventItem> items)
+        {
+            items.ForEach(item => 
+            item.MainEventImageUrl=item.MainEventImageUrl.Replace("http://externalcatalogbaseurltobereplaced",
+            _config["ExternalBaseUrl"]));
+
+            return (items);
+        }
     }
 }
