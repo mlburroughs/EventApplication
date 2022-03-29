@@ -57,10 +57,10 @@ namespace EventCatalogAPI.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> EventItem(
             [FromQuery]int pageIndex=0, 
-            [FromQuery]int pageSize=6)
+            [FromQuery]int pageSize=3)
         {
             var items= await _context.Events
-                 .OrderBy(e => e.EventMetroCity)
+                 .OrderBy(e => e.Name)
                  .Skip(pageIndex * pageSize)
                  .Take(pageSize)
                  .ToListAsync();
@@ -74,7 +74,7 @@ namespace EventCatalogAPI.Controllers
         {
             items.ForEach(item => 
             item.MainEventImageUrl=item.MainEventImageUrl.Replace("http://externalcatalogbaseurltobereplaced",
-            _config["ExternalBaseUrl"]));
+            _config["Externalbaseurl"]));
 
             return (items);
         }
