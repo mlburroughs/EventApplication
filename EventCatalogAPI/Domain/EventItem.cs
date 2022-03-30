@@ -14,8 +14,8 @@ namespace EventCatalogAPI.Domain
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime EventDateTime { get; set; }
-        public DateTime Date { get { return EventDateTime.Date; } set {Date = value; } }
-        public DateTime Time { get { return EventDateTime.ToLocalTime(); } set { Time = value; } }
+        public string Date { get {return $"{EventDateTime.Month}/{EventDateTime.Day}/{EventDateTime.Year}"; } set {Date = value; } }
+        public string Time { get {return $"{EventDateTime.Hour}:{EventDateTime.Minute}"; } set {Time = value; } }
 
 
         //Images
@@ -46,5 +46,6 @@ namespace EventCatalogAPI.Domain
         public virtual EventCategory EventCategory { get; set; }
         public virtual EventMetroCity EventMetroCity { get; set; }
         public virtual EventOrganizer EventOrganizer { get; set; }
+
     }
 }
