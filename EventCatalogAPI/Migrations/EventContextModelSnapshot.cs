@@ -55,9 +55,10 @@ namespace EventCatalogAPI.Migrations
                     b.Property<string>("AdditionalEventImagesUrl4")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Date")
+                    b.Property<string>("Date")
+                        .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("datetime2");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -107,9 +108,10 @@ namespace EventCatalogAPI.Migrations
                     b.Property<string>("Tag4")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("Time")
+                    b.Property<string>("Time")
+                        .IsRequired()
                         .HasMaxLength(20)
-                        .HasColumnType("datetime2");
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
