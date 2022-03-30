@@ -157,7 +157,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 05, 27, 10, 0, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/1",
                               Price=12.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy= Helper.Refunds()[0],
                               Tag1="Flowers",
                               Tag2="Family Friendly",
                               EventTypeId=11,
@@ -171,7 +171,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 08, 20, 6, 0, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/2",
                               Price=79.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[2],
                               Tag1="Marathon",
                               Tag2="Run",
                               EventTypeId=6,
@@ -186,7 +186,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 07, 1, 11, 0, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/3",
                               Price=29.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[2],
                               Tag1="Technology",
                               Tag2="Hackathon",
                               Tag3="Programming",
@@ -201,7 +201,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 12, 4, 12, 0, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/4",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="Winter",
                               Tag2="Shopping",
                               EventTypeId=11,
@@ -216,7 +216,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 6, 1, 7, 30, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/5",
                               Price=24.50M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Technology",
                               Tag2="Space",
                               Tag3="Telescope",
@@ -232,7 +232,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 18, 5, 30, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/6",
                               Price=129.50M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Race",
                               EventTypeId=6,
                               EventCategoryId=20,
@@ -245,7 +245,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 8, 1, 14, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/7",
                               Price=29.50M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Music",
                               Tag2="Art",
                               EventTypeId=11,
@@ -259,7 +259,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2023, 3, 1, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/8",
                               Price=59.50M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Music",
                               EventTypeId=15,
                               EventCategoryId=13,
@@ -272,7 +272,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 5, 12, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/9",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="Technology",
                               EventTypeId=9,
                               EventCategoryId=2,
@@ -285,8 +285,8 @@ namespace EventCatalogAPI.Data
                               "Seattle landmark",
                               EventDateTime = new DateTime(2022, 6, 12, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/10",
-                              Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              Price=29.99M,
+                              RefundPolicy=Helper.Refunds()[4],
                               Tag1="Technology",
                               EventTypeId=2,
                               EventCategoryId=4,
@@ -299,7 +299,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 12, 1, 17, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/11",
                               Price=25.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Food",
                               Tag2="Italian",
                               Tag3="Cooking Class",
@@ -314,7 +314,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 11, 12, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/12",
                               Price=9.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Wine",
                               EventTypeId=11,
                               EventCategoryId=4,
@@ -327,7 +327,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 9, 29, 13, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/13",
                               Price=29.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Oktoberfest",
                               Tag2="Beer",
                               EventTypeId=11,
@@ -341,7 +341,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 7, 4, 21, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/14",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="fireworks",
                               Tag2="fourth of july",
                               EventTypeId=8,
@@ -355,7 +355,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 8, 12, 8, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/15",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="books",
                               EventTypeId=8,
                               EventCategoryId=14,
@@ -369,7 +369,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 9, 16, 12, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/16",
                               Price=14.50M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="children",
                               EventTypeId=16,
                               EventCategoryId=5,
@@ -384,7 +384,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 7, 29, 8, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/17",
                               Price=125.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[3],
                               Tag1="Camping",
                               Tag2="Nature",
                               EventTypeId=17,
@@ -399,7 +399,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 5, 8, 14, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/18",
                               Price=69.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Tea",
                               Tag2="Mother's Day 2022",
                               EventTypeId=7,
@@ -414,7 +414,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 11, 1, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/19",
                               Price=9.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Pastry",
                               Tag2="Italian",
                               EventTypeId=3,
@@ -428,7 +428,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 7, 11, 11, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/20",
                               Price=250.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[3],
                               Tag1="Technology",
                               Tag2= "Tetris",
                               EventTypeId=10,
@@ -443,7 +443,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 5, 29, 13, 30, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/21",
                               Price=24.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="French Quarter",
                               EventTypeId=2,
                               EventCategoryId=4,
@@ -456,7 +456,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 6, 12, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/22",
                               Price=4.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[4],
                               Tag1="Children",
                               EventTypeId=7,
                               EventCategoryId=21,
@@ -469,7 +469,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 3, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/23",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="wellness",
                               EventTypeId=3,
                               EventCategoryId=11,
@@ -482,7 +482,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 31, 15, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/24",
                               Price=14.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Halloween",
                               EventTypeId=16,
                               EventCategoryId=19,
@@ -496,7 +496,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 6, 1, 7, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/25",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="Save the Killer Whales",
                               EventTypeId=5,
                               EventCategoryId=9,
@@ -509,7 +509,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 9, 3, 20, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/26",
                               Price=19.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Classical Music",
                               Tag2="Cello",
                               EventTypeId=15,
@@ -523,7 +523,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 6, 1, 19, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/27",
                               Price=29.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[3],
                               Tag1="Classical Music",
                               Tag2="Piano",
                               EventTypeId=15,
@@ -537,7 +537,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 6, 10, 6, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/28",
                               Price=0.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Technology",
                               EventTypeId=2,
                               EventCategoryId=4,
@@ -551,7 +551,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 8, 1, 9, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/29",
                               Price=79.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[4],
                               Tag1="Women in Technology",
                               EventTypeId=14,
                               EventCategoryId=2,
@@ -564,7 +564,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 1, 10, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/30",
                               Price=10.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[4],
                               Tag1="Clean Energy",
                               EventTypeId=20,
                               EventCategoryId=19,
@@ -577,7 +577,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 1, 19, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/31",
                               Price=59.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[2],
                               Tag1="Ballet",
                               EventTypeId=15,
                               EventCategoryId=15,
@@ -590,7 +590,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 11, 5, 9, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/32",
                               Price=49.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Theatre",
                               EventTypeId=15,
                               EventCategoryId=15,
@@ -603,7 +603,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 7, 1, 9, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/33",
                               Price=00.00M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[5],
                               Tag1="movie",
                               EventTypeId=4,
                               EventCategoryId=7,
@@ -616,7 +616,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 8, 6, 10, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/34",
                               Price=19.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Fair",
                               EventTypeId=11,
                               EventCategoryId=4,
@@ -629,7 +629,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 12, 31, 21, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/35",
                               Price=89.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="New Year's Eve",
                               EventTypeId=7,
                               EventCategoryId=19,
@@ -642,7 +642,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 10, 29, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/36",
                               Price=19.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Comedy",
                               EventTypeId=15,
                               EventCategoryId=15,
@@ -655,7 +655,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 8, 3, 18, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/37",
                               Price=9.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Bealtes",
                               EventTypeId=15,
                               EventCategoryId=13,
@@ -668,7 +668,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 11, 4, 10, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/38",
                               Price=9.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[4],
                               Tag1="Tech Careers",
                               EventTypeId=9,
                               EventCategoryId=18,
@@ -681,7 +681,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 8, 1, 9, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/39",
                               Price=39.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Wellness",
                               Tag2="Yoga",
                               EventTypeId=13,
@@ -695,7 +695,7 @@ namespace EventCatalogAPI.Data
                               EventDateTime = new DateTime(2022, 9, 20, 2, 00, 0),
                               MainEventImageUrl ="http://externalcatalogbaseurltobereplaced/api/pic/40",
                               Price=9.99M,
-                              RefundPolicy="Placeholder",//come back
+                              RefundPolicy=Helper.Refunds()[0],
                               Tag1="Ballroom",
                               EventTypeId=10,
                               EventCategoryId=15,
