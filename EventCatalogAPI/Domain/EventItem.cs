@@ -13,11 +13,8 @@ namespace EventCatalogAPI.Domain
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public DateTime EventDateTime { get; set; }/*
-        public string Date { get {return $"{EventDateTime.Month}/{EventDateTime.Day}/{EventDateTime.Year}"; } set {Date = value; } }
-        public string Time { get {return $"{EventDateTime.Hour}:{EventDateTime.Minute}"; } set {Time = value; } }*/
+        public DateTime EventDateTime { get; set; }
 
-        
         //Images
         public string MainEventImageUrl { get; set; }
         public string AdditionalEventImagesUrl1 { get; set; }
