@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EventCatalogAPI.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -70,9 +70,7 @@ namespace EventCatalogAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                    EventDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Date = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Time = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
+                    EventDateTime = table.Column<DateTime>(type: "datetime2", maxLength: 50, nullable: false),
                     MainEventImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AdditionalEventImagesUrl1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AdditionalEventImagesUrl2 = table.Column<string>(type: "nvarchar(max)", nullable: true),

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventCatalogAPI.Migrations
 {
     [DbContext(typeof(EventContext))]
-    [Migration("20220330012223_Initial")]
-    partial class Initial
+    [Migration("20220331124839_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -57,11 +57,6 @@ namespace EventCatalogAPI.Migrations
                     b.Property<string>("AdditionalEventImagesUrl4")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Date")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
                     b.Property<string>("Description")
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
@@ -70,6 +65,7 @@ namespace EventCatalogAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("EventDateTime")
+                        .HasMaxLength(50)
                         .HasColumnType("datetime2");
 
                     b.Property<int>("EventMetroCityId")
@@ -109,11 +105,6 @@ namespace EventCatalogAPI.Migrations
 
                     b.Property<string>("Tag4")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Time")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 

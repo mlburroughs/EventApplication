@@ -69,7 +69,7 @@ namespace EventCatalogAPI.Controllers
             return Ok(items);
             
         }
-
+        
         private List<EventItem> ChangePictureUrl(List<EventItem> items)
         {
             items.ForEach(item => 
