@@ -80,15 +80,7 @@ namespace EventCatalogAPI.Data
 
                 e.Property(f => f.EventDateTime)
                     .IsRequired()
-                    .HasMaxLength(50);/*
-
-                e.Property(f => f.Date)
-                    .IsRequired()
-                    .HasMaxLength(20);
-
-                e.Property(f => f.Time)
-                    .IsRequired()
-                    .HasMaxLength(20);*/
+                    .HasMaxLength(50);
 
                 e.Property(f => f.Price)
                     .IsRequired()
