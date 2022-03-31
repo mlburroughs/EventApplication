@@ -195,7 +195,7 @@ namespace EventCatalogAPI.Data
                               EventMetroCityId=12,
                               EventOrganizerId=5
                               },
-
+                
                 new EventItem{Name="Winter Holiday Market",
                               Description="FREE ADMISSION. Find holidayc gifts form a variety of local vendors",
                               EventDateTime = new DateTime(2022, 12, 4, 12, 0, 0),
