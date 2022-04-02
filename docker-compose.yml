@@ -12,18 +12,26 @@ services:
      SA_PASSWORD: Event@API
     ports:
      - "1448:1433"
-    container_name: EventsSQLServer
+    container_name: eventssqlserver
     networks:
      - backend
 
   eventcatalogapi:
-    image: Events/EventsCatalogAPI
+    image: events/eventscatalogapi
     build:
       context: ./EventCatalogAPI
       dockerfile: Dockerfile
     environment:
-      Externalbaseurl: https://localhost:44368/
+      Externalbaseurl: http://localhost:7000
       DatabaseServer: mssqlserver
       DatabaseName: EventCatalog
-      DatabaseUSer: sa
+      DatabaseUser: sa
       DatabasePassword: Event@API
+    ports:
+      - "7000:80"
+    container_name: eventscatalogapi
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - mssqlserver
