@@ -1,5 +1,6 @@
 ﻿using EventCatalogAPI.Data;
 using EventCatalogAPI.Domain;
+using EventCatalogAPI.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -55,21 +56,74 @@ namespace EventCatalogAPI.Controllers
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> EventItem(
-            [FromQuery]int pageIndex=0, 
-            [FromQuery]int pageSize=3)
+        public async Task<IActionResult> EventItems(
+            [FromQuery] int pageIndex = 0,
+            [FromQuery] int pageSize = 6)
         {
-            var items= await _context.Events
-                 .OrderBy(e => e.Name)
-                 .Skip(pageIndex * pageSize)
-                 .Take(pageSize)
-                 .ToListAsync();
+            var itemsCount = _context.Events.LongCountAsync();
+            var items = await _context.Events
+                                .OrderBy(c => c.Name)
+                                .Skip(pageIndex * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
 
-            items= ChangePictureUrl(items);
-            return Ok(items);
-            
+            items = ChangePictureUrl(items);
+
+            var model = new PaginatedItemsViewModel
+            {
+                PageIndex = pageIndex,
+                PageSize = items.Count,
+                Count = itemsCount.Result,
+                Data = items
+            };
+            return Ok(model);
         }
-        
+
+        [HttpGet("[action]/filter")]
+        public async Task<IActionResult> EventItems(
+            [FromQuery] int? eventTypeId,
+            [FromQuery] int? eventCategoryId,
+            [FromQuery] int? eventMetroCityId,
+            [FromQuery] int? eventOrganizerId,
+            [FromQuery] int pageIndex = 0,
+            [FromQuery] int pageSize = 6)
+        {
+            var query = (IQueryable<EventItem>)_context.Events;
+            if (eventTypeId.HasValue)
+            {
+                query = query.Where(c => c.EventTypeId == eventTypeId);
+            }
+            if (eventCategoryId.HasValue)
+            {
+                query = query.Where(c => c.EventCategoryId == eventCategoryId);
+            }
+            if (eventMetroCityId.HasValue)
+            {
+                query = query.Where(c => c.EventMetroCityId == eventMetroCityId);
+            }
+            if (eventOrganizerId.HasValue)
+            {
+                query = query.Where(c => c.EventOrganizerId == eventOrganizerId);
+            }
+            var itemsCount = _context.Events.LongCountAsync();
+            var items = await query
+                                .OrderBy(c => c.Name)
+                                .Skip(pageIndex * pageSize)
+                                .Take(pageSize)
+                                .ToListAsync();
+
+            items = ChangePictureUrl(items);
+
+            var model = new PaginatedItemsViewModel
+            {
+                PageIndex = pageIndex,
+                PageSize = items.Count,
+                Count = itemsCount.Result,
+                Data = items
+            };
+            return Ok(model);
+        }
+
         private List<EventItem> ChangePictureUrl(List<EventItem> items)
         {
             items.ForEach(item => 
