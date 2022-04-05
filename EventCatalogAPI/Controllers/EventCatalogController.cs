@@ -29,7 +29,7 @@ namespace EventCatalogAPI.Controllers
         public async Task<IActionResult> EventCategories() //The name of the thread
         {
             //This task (thread) will query the data base and get all the event categories and convert them to a list 
-            var categories = await _context.EventCategories.ToListAsync();
+            var categories = await _context.EventCategories.ToListAsync(); 
             return Ok(categories);
 
         }
