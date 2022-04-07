@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebMVC.Infrastructure;
+using WebMVC.Models;
 
 namespace WebMVC.Services
 {
@@ -150,6 +152,11 @@ namespace WebMVC.Services
             return items;
         }
 
-
+        public async Task<EventCatalog> GetEventItemsAsync(int page , int size , int? type, int? category,  int?organizer, int?city)
+        {
+            var EventItemUrl = APIPaths.Catalog.GetAllEventItems(_baseUrl,page,size,type,category,organizer,city );
+            var dataString = await _client.GetStringAsync(EventItemUrl);
+            return JsonConvert.DeserializeObject<EventCatalog>(dataString);
+        }
     }
 }
