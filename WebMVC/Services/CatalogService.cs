@@ -11,7 +11,7 @@ using WebMVC.Models;
 
 namespace WebMVC.Services
 {
-    public class CatalogService
+    public class CatalogService: ICatalogService
 
     {
         private readonly string _baseUrl;
