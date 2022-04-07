@@ -45,20 +45,20 @@ namespace WebMVC.Infrastructure
 
                 if (organizer.HasValue)
                 {
-                    filterQs = $"EventOrganizerId={organizer.Value}";
+                    filterQs = (filterQs == string.Empty) ? $"EventOrganizerId={organizer.Value}" 
+                        : filterQs + $"&EventOrganizerId={organizer.Value}";
                 }
+
                 if (city.HasValue)
                 {
-                    filterQs = $"EventMetroCityId={city.Value}";
+                    filterQs = (filterQs == string.Empty) ? $"EventMetroCityId={city.Value}"
+                           : filterQs + $"&EventMetroCityId={city.Value}";
                 }
 
                 if (type.HasValue)
                 {
-                    filterQs = (filterQs == string.Empty) ?
-                        $"EventTypeId={type.Value}" :
-                        $"&EventCategoryId={type.Value}" +
-                        $"&EventMetroCityId={city.Value}" +
-                        $"&EventOrganizerId={organizer.Value}";
+                    filterQs = (filterQs == string.Empty) ? $"EventTypeId={type.Value}"
+                           : filterQs + $"&EventTypeId={type.Value}";
 
                 }
                 if (string.IsNullOrEmpty(filterQs))
