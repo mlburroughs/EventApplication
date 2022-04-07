@@ -45,8 +45,8 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = category.Value<string>("Id"),
-                    Text= category.Value<string>("Category")
+                    Value = category.Value<string>("id"),
+                    Text= category.Value<string>("category")
                     
                 }) ;
 
@@ -77,8 +77,8 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = type.Value<string>("Id"),
-                    Text = type.Value<string>("Type")
+                    Value = type.Value<string>("id"),
+                    Text = type.Value<string>("type")
 
                 });
 
@@ -109,8 +109,8 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = city.Value<string>("Id"),
-                    Text = city.Value<string>("MetroCity")
+                    Value = city.Value<string>("id"),
+                    Text = city.Value<string>("metroCity")
 
                 });
 
@@ -141,13 +141,15 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = organizer.Value<string>("Id"),
-                    Text = organizer.Value<string>("OrganizerName")
+                    Value = organizer.Value<string>("id"),
+                    Text = organizer.Value<string>("organizerName")
 
                 });
 
             }
             return items;
         }
+
+
     }
 }
