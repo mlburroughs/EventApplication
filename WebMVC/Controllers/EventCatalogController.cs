@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebMVC.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebMVC.Controllers
 {
@@ -21,6 +22,12 @@ namespace WebMVC.Controllers
             var catalog= await _service.GetEventItemsAsync(page ?? 0,itemsOnPage, typeFilterApplied, categoryFilterApplied, organizerFilterApplied, cityFilterApplied);
            
             return View(catalog);
+        }
+
+        [Authorize]
+        public IActionResult About()
+        {
+            return View();
         }
     }
 }
