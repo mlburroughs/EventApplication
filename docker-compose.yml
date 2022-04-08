@@ -16,17 +16,6 @@ services:
     networks:
      - backend
 
-  tokensqlserver:
-    image: "mcr.microsoft.com/mssql/server:latest"
-    environment:
-      ACCEPT_EULA: Y
-      SA_PASSWORD: ProductApi(!)
-    ports:
-      - "1449:1433"
-    container_name: eventsqlserver
-    networks:
-      - backend
-
   eventcatalogapi:
     image: events/eventscatalogapi
     build:
@@ -46,26 +35,4 @@ services:
       - backend
     depends_on:
       - mssqlserver
-
-  tokenserver:
-    build:
-      context: .\TokenServiceAPI
-      dockerfile: DockerFile
-    image: events/tokenapi
-    volumes:
-      - C:\Users\KalAcademy\AppData\Roaming\microsoft\UserSecrets\:/root/.microsoft/usersecrets
-    environment:
-      ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_HTTPS_PORT: 7801
-      MvcClient: http://localhost:7500
-      BasketApiClient: http://localhost:7510
-      OrderApiClient: http://localhost:7520
-    ports:
-      - "7800:80"
-      - "7801:443"
-    container_name: tokenserviceapi
-    networks:
-      - backend
-      - frontend
-    depends_on:
-      - tokensqlserver
+     
