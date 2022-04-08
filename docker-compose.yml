@@ -16,6 +16,7 @@ services:
     networks:
      - backend
 
+  
   eventcatalogapi:
     image: events/eventscatalogapi
     build:
@@ -35,6 +36,7 @@ services:
       - backend
     depends_on:
       - mssqlserver
+
   webmvc:
     image: events/webmvc
     build:
@@ -49,7 +51,7 @@ services:
     container_name: eventcatalogweb
     depends_on:
      - eventcatalogapi
-       
+  
 
 
 
