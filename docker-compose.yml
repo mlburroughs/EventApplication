@@ -35,4 +35,24 @@ services:
       - backend
     depends_on:
       - mssqlserver
+  webmvc:
+    image: events/webmvc
+    build:
+      context: .\WebMVC
+      dockerfile: Dockerfile
+    environment:
+      EventCatalogUrl: http://eventcatalogapi
+    ports:
+      - "7500:80"
+    networks:
+      - frontend
+    container_name: eventcatalogweb
+    depends_on:
+     - eventcatalogapi
+       
+
+
+
+       
+   
      

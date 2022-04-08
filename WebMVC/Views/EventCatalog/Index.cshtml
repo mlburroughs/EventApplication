@@ -1,7 +1,7 @@
 ﻿@model WebMVC.Models.EventCatalog
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Evnets!";
 }
 
 <h1>Index</h1>
@@ -35,12 +35,7 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
+     
         </tr>
 }
     </tbody>
