@@ -1,15 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebMVC.Infrastructure;
+using WebMVC.Models;
 
 namespace WebMVC.Services
 {
-    public class CatalogService
+    public class CatalogService: ICatalogService
 
     {
         private readonly string _baseUrl;
@@ -45,8 +47,8 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = category.Value<string>("Id"),
-                    Text= category.Value<string>("Category")
+                    Value = category.Value<string>("id"),
+                    Text= category.Value<string>("category")
                     
                 }) ;
 
@@ -77,8 +79,8 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = type.Value<string>("Id"),
-                    Text = type.Value<string>("Type")
+                    Value = type.Value<string>("id"),
+                    Text = type.Value<string>("type")
 
                 });
 
@@ -109,8 +111,8 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = city.Value<string>("Id"),
-                    Text = city.Value<string>("MetroCity")
+                    Value = city.Value<string>("id"),
+                    Text = city.Value<string>("metroCity")
 
                 });
 
@@ -141,13 +143,20 @@ namespace WebMVC.Services
             {
                 items.Add(new SelectListItem
                 {
-                    Value = organizer.Value<string>("Id"),
-                    Text = organizer.Value<string>("OrganizerName")
+                    Value = organizer.Value<string>("id"),
+                    Text = organizer.Value<string>("organizerName")
 
                 });
 
             }
             return items;
+        }
+
+        public async Task<EventCatalog> GetEventItemsAsync(int page , int size , int? type, int? category,  int?organizer, int?city)
+        {
+            var EventItemUrl = APIPaths.Catalog.GetAllEventItems(_baseUrl,page,size,type,category,organizer,city );
+            var dataString = await _client.GetStringAsync(EventItemUrl);
+            return JsonConvert.DeserializeObject<EventCatalog>(dataString);
         }
     }
 }
