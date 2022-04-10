@@ -19,14 +19,11 @@ namespace TokenServiceAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration, IWebHostEnvironment env)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-
-            CurrentEnvironment = env;
         }
 
-        private IWebHostEnvironment CurrentEnvironment { get; set; }
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
