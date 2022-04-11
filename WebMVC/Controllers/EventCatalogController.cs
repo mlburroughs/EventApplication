@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebMVC.Services;
 using Microsoft.AspNetCore.Authorization;
+using WebMVC.ViewModels;
 
 namespace WebMVC.Controllers
 {
@@ -20,8 +21,30 @@ namespace WebMVC.Controllers
         {
             var itemsOnPage = 5;
             var catalog= await _service.GetEventItemsAsync(page ?? 0,itemsOnPage, typeFilterApplied, categoryFilterApplied, organizerFilterApplied, cityFilterApplied);
+
+            var viewmodel = new EventCatalogIndexViewModel
+            {
+                EventTypes = await _service.GetEventTypesAsync(),
+                EventCategories = await _service.GetEventCategoriesAsync(),
+                EventOrganizers = await _service.GetEventOrganizers(),
+                EventMetroCities = await _service.GetEventCitiesAsync(),
+                EventItems = catalog.Data,
+                PaginationInfo = new PaginationInfo
+                {
+                    ActualPage = catalog.PageIndex,
+                    ItemsPerPage = catalog.PageSize,
+                    TotalItems = catalog.Count,
+                    TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage)
+                },
+
+                // Use these properties to keep the state of the page 
+                TypeFilterApplied = typeFilterApplied,
+                CategoryFilterApplied= categoryFilterApplied,
+                OrganizerFilterApplied= organizerFilterApplied,
+                CityFilterApplied= cityFilterApplied
+            };
            
-            return View(catalog);
+            return View(viewmodel);
         }
 
         [Authorize]
