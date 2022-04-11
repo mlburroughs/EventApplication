@@ -63,11 +63,11 @@ namespace WebMVC.Infrastructure
                 }
                 if (string.IsNullOrEmpty(filterQs))
                 {
-                    preUri = $"{baseUri}/items?pageIndex={page}&pageSize={size}";
+                    preUri = $"{baseUri}/eventitems?pageIndex={page}&pageSize={size}";
                 }
                 else
                 {
-                    preUri = $"{baseUri}/items/filter?pageIndex={page}&pageSize={size}&{filterQs}";
+                    preUri = $"{baseUri}/eventitems/filter?pageIndex={page}&pageSize={size}&{filterQs}";
                 }
                 return preUri;
 
