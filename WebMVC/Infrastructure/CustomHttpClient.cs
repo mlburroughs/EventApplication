@@ -30,6 +30,7 @@ namespace WebMVC.Infrastructure
                     (authorizationMethod, authorizationToken);
             }
             var response= await _client.SendAsync(requestMessage);
+            Console.WriteLine(response.StatusCode.ToString());
             return await response.Content.ReadAsStringAsync();
         }
 
