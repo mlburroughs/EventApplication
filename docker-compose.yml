@@ -23,7 +23,7 @@ services:
       SA_PASSWORD: ProductApi(!)
     ports:
       - "1449:1433"
-    container_name: eventsqlserver
+    container_name: eventtokensqlserver
     networks:
       - backend
 
@@ -69,7 +69,7 @@ services:
   tokenserver:
     build:
       context: .\TokenServiceAPI
-      dockerfile: DockerFile
+      dockerfile: Dockerfile
     image: events/tokenapi
     environment:
       ASPNETCORE_ENVIRONMENT: Development
