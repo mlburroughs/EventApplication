@@ -4,28 +4,28 @@
 
 
 <form asp-controller="Cart" asp-action="AddToCart">
-    <img class="esh-catalog-thumbnail" src="@Model.MainEventImageUrl" />
-    <input class="esh-catalog-button" type="submit" value="[ ADD TO CART ]" />
-    <div class="esh-catalog-name">
+    <img class="img-thumbnail" src="@Model.MainEventImageUrl" />
+    <input class="button" type="submit" value=" Register" />
+    <div class="h3">
         <span>@Model.Name</span>
     </div>
-    <div class="esh-catalog-price">
+    <div class="h4">
         <span>@Model.Price.ToString("N2")</span>
     </div>
-    <input type="hidden" asp-for="@Model.EventType" name="brand" />
-    <input type="hidden" asp-for="@Model.EventTypeId" name="brandId" />
-    <input type="hidden" asp-for="@Model.EventCategory" name="type" />
-    <input type="hidden" asp-for="@Model.EventCategoryId" name="typeId" />
-    <input type="hidden" asp-for="@Model.EventMetroCity" name="type" />
-    <input type="hidden" asp-for="@Model.EventMetroCityId" name="typeId" />
-    <input type="hidden" asp-for="@Model.EventOrganizer" name="type" />
-    <input type="hidden" asp-for="@Model.EventOrganizerId" name="typeId" />
+    <input type="hidden" asp-for="@Model.EventType" name="type" />
+    <input type="hidden" asp-for="@Model.EventTypeId" name="typeId" />
+    <input type="hidden" asp-for="@Model.EventCategory" name="category" />
+    <input type="hidden" asp-for="@Model.EventCategoryId" name="categoryId" />
+    <input type="hidden" asp-for="@Model.EventMetroCity" name="metrocity" />
+    <input type="hidden" asp-for="@Model.EventMetroCityId" name="metrocityId" />
+    <input type="hidden" asp-for="@Model.EventOrganizer" name="organizer" />
+    <input type="hidden" asp-for="@Model.EventOrganizerId" name="organizerId" />
     <input type="hidden" asp-for="@Model.Description" name="description" />
     <input type="hidden" asp-for="@Model.Id" name="id" />
     <input type="hidden" asp-for="@Model.Name" name="name" />
     <input type="hidden" asp-for="@Model.MainEventImageUrl" name="pictureUrl" />
     <input type="hidden" asp-for="@Model.Price" name="price" />
-    <input type="hidden" asp-for="@Model.EventDateTime" name="price" />
-    <input type="hidden" asp-for="@Model.RefundPolicy" name="price" />
-    <input type="hidden" asp-for="@Model.Tag1" name="price" />
+    <input type="hidden" asp-for="@Model.EventDateTime" name="eventdatetime" />
+    <input type="hidden" asp-for="@Model.RefundPolicy" name="refundpolicy" />
+    <input type="hidden" asp-for="@Model.Tag1" name="tag1" />
 </form>
