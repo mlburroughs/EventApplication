@@ -1,0 +1,41 @@
+﻿@model WebMVC.ViewModels.EventCatalogIndexViewModel
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap_minty.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<h1>Events!</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Event Name 
+            </th>
+            <th>
+               Event Description
+            </th>
+            <th>
+               Ticket Price 
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.EventItems) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+     
+        </tr>
+}
+    </tbody>
+</table>
