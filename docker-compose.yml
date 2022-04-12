@@ -27,6 +27,7 @@ services:
     networks:
       - backend
 
+
   eventcatalogapi:
     image: events/eventscatalogapi
     build:
@@ -84,6 +85,7 @@ services:
       - frontend
     depends_on:
       - tokensqlserver
+
        
 
 
