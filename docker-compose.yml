@@ -16,6 +16,19 @@ services:
     networks:
      - backend
 
+<<<<<<< HEAD
+=======
+  tokensqlserver:
+    image: "mcr.microsoft.com/mssql/server:latest"
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: ProductApi(!)
+    ports:
+      - "1449:1433"
+    container_name: eventtokensqlserver
+    networks:
+      - backend
+>>>>>>> master
 
   eventcatalogapi:
     image: events/eventscatalogapi
@@ -43,7 +56,10 @@ services:
       context: .\WebMVC
       dockerfile: Dockerfile
     environment:
+      ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
+      IdentityUrl: http://192.168.1.102:7800
+      CallBackUrl: http://localhost:7500
     ports:
       - "7500:80"
     networks:
@@ -51,8 +67,30 @@ services:
     container_name: eventcatalogweb
     depends_on:
      - eventcatalogapi
+     - tokenserver
   
+<<<<<<< HEAD
   
+=======
+  tokenserver:
+    build:
+      context: .\TokenServiceAPI
+      dockerfile: Dockerfile
+    image: events/tokenapi
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      MvcClient: http://localhost:7500
+      BasketApiClient: http://localhost:7510
+      OrderApiClient: http://localhost:7520
+    ports:
+      - "7800:80"
+    container_name: tokenserviceapi
+    networks:
+      - backend
+      - frontend
+    depends_on:
+      - tokensqlserver
+>>>>>>> master
        
 
 

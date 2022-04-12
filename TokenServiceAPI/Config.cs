@@ -21,6 +21,15 @@ namespace TokenServiceAPI
 				};
 		}
 
+		public static IEnumerable<ApiResource> GetAllApiResources()
+		{
+			return new List<ApiResource>
+				{
+					 new ApiResource("basket", "Shopping Cart Api"),
+					 new ApiResource("order", "Ordering Api"),
+				};
+		}
+
 		//Get all urls
 		public static Dictionary<string, string> GetUrls(IConfiguration configuration)
 		{
