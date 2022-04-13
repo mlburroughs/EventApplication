@@ -70,10 +70,10 @@
     {
         @Html.Partial("_pagination", Model.PaginationInfo)
 
-        <div class="h5">
+        <div class="esh-catalog-items row">
             @foreach (var catalogItem in Model.EventItems)
             {
-                <div class="h5">
+                <div class="esh-catalog-item col-md-4">
                     @Html.Partial("_product", catalogItem)
                 </div>
             }

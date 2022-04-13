@@ -129,7 +129,7 @@ namespace EventCatalogAPI.Data
                 new EventMetroCity{MetroCity="Saint Louis"},
                 new EventMetroCity{MetroCity="Salt Lake City"},
                 new EventMetroCity{MetroCity="San Diego"},
-                new EventMetroCity{MetroCity="San Francisco/San Jose/Oakland"},
+                new EventMetroCity{MetroCity="San Francisco/Oakland"},
                 new EventMetroCity{MetroCity="Seattle/Tacoma"},
             };
         }
