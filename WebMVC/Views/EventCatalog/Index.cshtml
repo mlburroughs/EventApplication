@@ -69,12 +69,8 @@
     @if (Model.EventItems.Count() > 0)
     {
         @Html.Partial("_pagination", Model.PaginationInfo)
-<<<<<<< HEAD
-        <div class="h5">
-=======
 
         <div class="esh-catalog-items row">
->>>>>>> master
             @foreach (var catalogItem in Model.EventItems)
             {
                 <div class="esh-catalog-item col-md-4">
