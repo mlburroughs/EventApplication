@@ -19,7 +19,7 @@ namespace WebMVC.Controllers
         }
         public async Task<IActionResult> Index(int?page, int?typeFilterApplied, int? categoryFilterApplied, int?organizerFilterApplied, int? cityFilterApplied)
         {
-            var itemsOnPage = 5;
+            var itemsOnPage = 6;
             var catalog= await _service.GetEventItemsAsync(page ?? 0,itemsOnPage, typeFilterApplied, categoryFilterApplied, organizerFilterApplied, cityFilterApplied);
 
             var viewmodel = new EventCatalogIndexViewModel
