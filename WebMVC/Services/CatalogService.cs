@@ -124,7 +124,7 @@ namespace WebMVC.Services
 
         public async Task<IEnumerable<SelectListItem>> GetEventOrganizers()
         {
-            var EventOrgUrl = APIPaths.Catalog.GetAllEventCities(_baseUrl);
+            var EventOrgUrl = APIPaths.Catalog.GetAllEventOrganizers(_baseUrl);
             var dataString = await _client.GetStringAsync(EventOrgUrl);
 
             var items = new List<SelectListItem>

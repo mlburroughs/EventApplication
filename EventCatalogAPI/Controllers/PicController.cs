@@ -11,10 +11,10 @@ namespace EventCatalogAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PicsController : ControllerBase
+    public class PicController : ControllerBase
     {
         private readonly IWebHostEnvironment _env;
-        public PicsController(IWebHostEnvironment env)
+        public PicController(IWebHostEnvironment env)
         {
             _env = env;
 

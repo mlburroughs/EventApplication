@@ -4,14 +4,15 @@
 
 
 <form asp-controller="Cart" asp-action="AddToCart">
-    <img class="img-thumbnail" src="@Model.MainEventImageUrl" />
-    <input class="button" type="submit" value=" Register" />
+    <img class="esh-catalog-thumbnail" src="@Model.MainEventImageUrl" />
+
     <div class="h3">
         <span>@Model.Name</span>
     </div>
     <div class="h4">
         <span>@Model.Price.ToString("N2")</span>
     </div>
+    <input class="button" type="submit" value=" Register" />
     <input type="hidden" asp-for="@Model.EventType" name="type" />
     <input type="hidden" asp-for="@Model.EventTypeId" name="typeId" />
     <input type="hidden" asp-for="@Model.EventCategory" name="category" />
