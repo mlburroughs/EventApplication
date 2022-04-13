@@ -69,7 +69,6 @@
     @if (Model.EventItems.Count() > 0)
     {
         @Html.Partial("_pagination", Model.PaginationInfo)
-
         <div class="h5">
             @foreach (var catalogItem in Model.EventItems)
             {
