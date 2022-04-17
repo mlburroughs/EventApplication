@@ -1,10 +1,13 @@
 ﻿@model WebMVC.ViewModels.PaginationInfo
 
+@{ var PrevClass = Model.ActualPage == 0 ? "esh-pager-item esh-pager-item--navigable is-disabled @Model.Previous" : "esh-pager-item esh-pager-item--navigable @Model.Previous";
+    var NextClass = Model.ActualPage == Model.TotalPages-1 ? "esh-pager-item esh-pager-item--navigable is-disabled @Model.Next" : "esh-pager-item esh-pager-item--navigable @Model.Next";}
+
 <div class="esh-pager">
     <div class="container">
         <article class="esh-pager-wrapper row">
             <nav>
-                <a class="esh-pager-item esh-pager-item--navigable @Model.Previous"
+                <a class= "@(PrevClass)"
                    id="Previous"
                    asp-controller="EventCatalog"
                    asp-action="Index"
@@ -17,7 +20,7 @@
                     Showing @Model.ItemsPerPage of @Model.TotalItems products - Page @(Model.ActualPage + 1) - @Model.TotalPages
                 </span>
 
-                <a class="esh-pager-item esh-pager-item--navigable @Model.Next"
+                <a class="@(NextClass)"
                    id="Next"
                    asp-controller="EventCatalog"
                    asp-action="Index"
