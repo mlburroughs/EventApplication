@@ -14,5 +14,9 @@ namespace WebMVC.ViewModels
         public int TotalPages { get; set; }
         public string Previous { get; set; }
         public string Next { get; set; }
+
+        public bool HasPreviousPage => ActualPage > 1;
+
+        public bool HasNextPage => ActualPage < TotalPages;
     }
 }

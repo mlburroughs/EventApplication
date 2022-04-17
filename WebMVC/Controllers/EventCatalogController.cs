@@ -21,7 +21,6 @@ namespace WebMVC.Controllers
         {
             var itemsOnPage = 6;
             var catalog= await _service.GetEventItemsAsync(page ?? 0,itemsOnPage, typeFilterApplied, categoryFilterApplied, organizerFilterApplied, cityFilterApplied);
-
             var viewmodel = new EventCatalogIndexViewModel
             {
                 EventTypes = await _service.GetEventTypesAsync(),
@@ -35,6 +34,7 @@ namespace WebMVC.Controllers
                     ItemsPerPage = catalog.PageSize,
                     TotalItems = catalog.Count,
                     TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage)
+                 
                 },
 
                 // Use these properties to keep the state of the page 
@@ -42,8 +42,11 @@ namespace WebMVC.Controllers
                 CategoryFilterApplied= categoryFilterApplied,
                 OrganizerFilterApplied= organizerFilterApplied,
                 CityFilterApplied= cityFilterApplied
+
+              
             };
-           
+
+       
             return View(viewmodel);
         }
 

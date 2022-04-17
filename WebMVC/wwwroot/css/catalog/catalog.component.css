@@ -123,10 +123,10 @@
         pointer-events: none;
     }
 
-    .esh-catalog-button:hover {
-        background-color: #4a760f;
-        transition: all 0.35s;
-    }
+.esh-catalog-button:hover {
+    background-color: #4a760f;
+    transition: all 0.35s;
+}
 
 .esh-catalog-name {
     font-size: 1rem;
