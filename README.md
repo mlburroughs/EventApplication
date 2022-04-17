@@ -1,7 +1,7 @@
 # EventApplication
 
 Sprint 1: [![Watch the video](https://img.youtube.com/vi/HFVULcCjfOk/maxresdefault.jpg)](https://youtu.be/HFVULcCjfOk)
-Sprint 2: [![Watch the video](https://youtu.be/yYXMMTGsRVE)
+Sprint 2: (https://youtu.be/yYXMMTGsRVE)
 Instructions :
 1- Clone the repository to your local Visual Studio 
 2- Navigate to this docker-compose.yml file 
