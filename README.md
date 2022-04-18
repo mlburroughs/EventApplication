@@ -1,6 +1,6 @@
 # EventApplication
 Sprint 2:<br />
-[![Watch the video](https://i9.ytimg.com/vi/smCvDww4Rfg/hqdefault.jpg?v=625caa7f&sqp=CIDU8pIG&rs=AOn4CLDGC8AZvFwPNQP7GoQnTGigacGpFA)](https://youtu.be/smCvDww4Rfg)
+[![Watch the video](https://i9.ytimg.com/vi/yYXMMTGsRVE/maxresdefault.jpg?time=1650245100000&sqp=COz78pIG&rs=AOn4CLBiHeX3WKCplBOi8KydU3-Buacb5w)](https://youtu.be/yYXMMTGsRVE)
 
 Sprint 1: 
 [![Watch the video](https://img.youtube.com/vi/HFVULcCjfOk/maxresdefault.jpg)](https://youtu.be/HFVULcCjfOk)
