@@ -20,7 +20,9 @@ namespace WebMVC.Controllers
         public async Task<IActionResult> Index(int?page, int?typeFilterApplied, int? categoryFilterApplied, int?organizerFilterApplied, int? cityFilterApplied)
         {
             var itemsOnPage = 6;
+
             var catalog= await _service.GetEventItemsAsync(page ?? 0,itemsOnPage, typeFilterApplied, categoryFilterApplied, organizerFilterApplied, cityFilterApplied);
+
             var viewmodel = new EventCatalogIndexViewModel
             {
                 EventTypes = await _service.GetEventTypesAsync(),
@@ -33,8 +35,13 @@ namespace WebMVC.Controllers
                     ActualPage = catalog.PageIndex,
                     ItemsPerPage = catalog.PageSize,
                     TotalItems = catalog.Count,
-                    TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage)
-                 
+                    TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage),
+
+                       // Use these properties to keep the state of the page 
+                    TypeFilterApplied = typeFilterApplied,
+                    CategoryFilterApplied = categoryFilterApplied,
+                    OrganizerFilterApplied = organizerFilterApplied,
+                    CityFilterApplied = cityFilterApplied
                 },
 
                 // Use these properties to keep the state of the page 
@@ -42,11 +49,8 @@ namespace WebMVC.Controllers
                 CategoryFilterApplied= categoryFilterApplied,
                 OrganizerFilterApplied= organizerFilterApplied,
                 CityFilterApplied= cityFilterApplied
-
-              
             };
-
-       
+           
             return View(viewmodel);
         }
 

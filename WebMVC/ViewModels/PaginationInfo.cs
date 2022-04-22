@@ -15,8 +15,10 @@ namespace WebMVC.ViewModels
         public string Previous { get; set; }
         public string Next { get; set; }
 
-        public bool HasPreviousPage => ActualPage > 1;
+        public int? TypeFilterApplied { get; set; }
+        public int? CategoryFilterApplied { get; set; }
+        public int? OrganizerFilterApplied { get; set; }
+        public int? CityFilterApplied { get; set; }
 
-        public bool HasNextPage => ActualPage < TotalPages;
     }
 }
