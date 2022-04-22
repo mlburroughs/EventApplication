@@ -1,8 +1,7 @@
 ﻿@model WebMVC.ViewModels.PaginationInfo
 
 @{ var PrevClass = Model.ActualPage == 0 ? "esh-pager-item esh-pager-item--navigable is-disabled @Model.Previous" : "esh-pager-item esh-pager-item--navigable @Model.Previous";
-    var NextClass = Model.ActualPage == Model.TotalPages-1 ? "esh-pager-item esh-pager-item--navigable is-disabled @Model.Next" : "esh-pager-item esh-pager-item--navigable @Model.Next";
- }
+    var NextClass = Model.ActualPage == Model.TotalPages-1 ? "esh-pager-item esh-pager-item--navigable is-disabled @Model.Next" : "esh-pager-item esh-pager-item--navigable @Model.Next";}
 
 <div class="esh-pager">
     <div class="container">
@@ -12,17 +11,13 @@
                    id="Previous"
                    asp-controller="EventCatalog"
                    asp-action="Index"
-                   asp-route-page="@(Model.ActualPage - 1)"
-                   asp-route-typeFilterApplied="@(Model.TypeFilterApplied)"
-                   asp-route-categoryFilterApplied="@(Model.CategoryFilterApplied)"
-                   asp-route-organizerFilterApplied="@(Model.OrganizerFilterApplied)"
-                   asp-route-cityFilterApplied="@(Model.CityFilterApplied)"
+                   asp-route-page="@(Model.ActualPage -1)"
                    aria-label="Previous">
                     Previous
                 </a>
 
                 <span class="esh-pager-item">
-                    Showing @Model.ItemsPerPage of @Model.TotalItems products - Page @(Model.ActualPage + 1) - @Model.TotalPages
+                    Showing @Model.ItemsPerPage of @Model.TotalItems events - Page @(Model.ActualPage + 1) - @Model.TotalPages
                 </span>
 
                 <a class="@(NextClass)"
@@ -30,10 +25,6 @@
                    asp-controller="EventCatalog"
                    asp-action="Index"
                    asp-route-page="@(Model.ActualPage + 1)"
-                   asp-route-typeFilterApplied="@(Model.TypeFilterApplied)"
-                   asp-route-categoryFilterApplied="@(Model.CategoryFilterApplied)"
-                   asp-route-organizerFilterApplied="@(Model.OrganizerFilterApplied)"
-                   asp-route-cityFilterApplied="@(Model.CityFilterApplied)"
                    aria-label="Next">
                     Next
                 </a>
