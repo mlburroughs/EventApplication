@@ -25,12 +25,12 @@ namespace WebMVC.Infrastructure
                     new System.Net.Http.Headers.AuthenticationHeaderValue
                     (authorizationmethod, authorizationtoken);
             }
-             return ( await _client.SendAsync(requestMessage));
+            return (await _client.SendAsync(requestMessage));
         }
 
         public async Task<string> GetStringAsync(string uri, string authorizationtoken = null, string authorizationMethod = "Bearer")
         {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get,uri);
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
 
             if (authorizationtoken != null)
             {
@@ -38,14 +38,14 @@ namespace WebMVC.Infrastructure
                     new System.Net.Http.Headers.AuthenticationHeaderValue
                     (authorizationMethod, authorizationtoken);
             }
-            var response= await _client.SendAsync(requestMessage);
+            var response = await _client.SendAsync(requestMessage);
             return await response.Content.ReadAsStringAsync();
         }
 
         public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item, string authorizationtoken = null, string authorizationmethod = "Bearer")
         {
             return await DoPostPutAsync(uri, HttpMethod.Post, item, authorizationtoken, authorizationmethod);
-            
+
         }
 
         public async Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string authorizationtoken = null, string authorizationmethod = "Bearer")
@@ -70,7 +70,7 @@ namespace WebMVC.Infrastructure
                     new System.Net.Http.Headers.AuthenticationHeaderValue
                     (authorizationmethod, authorizationtoken);
             }
-            var response= await _client.SendAsync(requestMessage);
+            var response = await _client.SendAsync(requestMessage);
             if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
             {
                 throw new HttpRequestException();
