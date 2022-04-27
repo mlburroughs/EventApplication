@@ -26,6 +26,17 @@ services:
     container_name: eventtokensqlserver
     networks:
       - backend
+  
+  ordersqlserver:
+    image: "mcr.microsoft.com/mssql/server:latest"
+    environment: 
+     ACCEPT_EULA: Y
+     SA_PASSWORD: Event@API
+    ports:
+     - "1450:1433"
+    container_name: eventsordersqlserver
+    networks:
+     - backend
 
   basket.data:
     image: redis
@@ -34,7 +45,6 @@ services:
     container_name: basketdata
     networks:
      - backend
-
 
   eventcatalogapi:
     image: events/eventscatalogapi
@@ -55,6 +65,28 @@ services:
       - backend
     depends_on:
       - mssqlserver
+
+  order:
+    image: events/orderapi
+    build:
+      context: ./OrderAPI
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      IdentityUrl: http://192.168.86.29:7800
+      DatabaseServer: ordersqlserver
+      DatabaseName: OrdersDb
+      DatabaseUser: sa
+      DatabasePassword: Event@API
+    ports:
+      - "7020:80"
+    container_name: eventsorderapi
+    networks:
+      - frontend
+      - backend
+    depends_on:
+      - tokenserver
+      - ordersqlserver
 
   cartapi:
      image: events/cartapi
