@@ -32,7 +32,7 @@ namespace CartAPI
             services.AddControllers().AddNewtonsoftJson();
 
             services.AddTransient<ICartRepository, RedisCartRepository>();
-            services.AddSingleton<ConnectionMultiplexer >(cm =>
+            services.AddSingleton<ConnectionMultiplexer>(cm =>
             {
                 var configuration = ConfigurationOptions.Parse(Configuration["ConnectionString"], true);
                 configuration.ResolveDns = true;
@@ -81,7 +81,6 @@ namespace CartAPI
 
             app.UseRouting();
             app.UseAuthentication();
-
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
