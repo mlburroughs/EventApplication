@@ -35,7 +35,7 @@ namespace WebMVC.Controllers
                     ActualPage = catalog.PageIndex,
                     ItemsPerPage = catalog.PageSize,
                     TotalItems = catalog.Count,
-                    TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage)
+                    TotalPages = (int)Math.Ceiling((decimal)catalog.Count / itemsOnPage),
 
                        // Use these properties to keep the state of the page 
                     TypeFilterApplied = typeFilterApplied,
