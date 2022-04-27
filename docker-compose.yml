@@ -27,11 +27,19 @@ services:
     networks:
       - backend
 
+  basket.data:
+    image: redis
+    ports:
+    - "7050:6379"
+    container_name: basketdata
+    networks:
+     - backend
+
 
   eventcatalogapi:
     image: events/eventscatalogapi
     build:
-      context: ./EventCatalogAPI
+      context: .\EventCatalogAPI
       dockerfile: Dockerfile
     environment:
       Externalbaseurl: http://localhost:7000
@@ -47,6 +55,25 @@ services:
       - backend
     depends_on:
       - mssqlserver
+
+  cartapi:
+     image: events/cartapi
+     build:
+      context: .\EventCatalogAPI
+      dockerfile: Dockerfile
+     environment:
+      IdentityUrl: http://192.168.86.29:7800
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionString: basket.data
+     ports:
+      - "7010:80"
+     container_name: cartapi
+     networks:
+      - backend
+      - frontend
+     depends_on:
+      - tokenserver
+      - basket.data
 
   webmvc:
     image: events/webmvc

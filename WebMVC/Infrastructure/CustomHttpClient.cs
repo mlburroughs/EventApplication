@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -14,33 +15,67 @@ namespace WebMVC.Infrastructure
         {
             _client = new HttpClient();
         }
-        public Task<HttpResponseMessage> DeleteAsync<T>(string uri, string authorizationtodekn = null, string authorizationmethod = "Bearer")
+        public async Task<HttpResponseMessage> DeleteAsync<T>(string uri, string authorizationtoken = null, string authorizationmethod = "Bearer")
         {
-            throw new NotImplementedException();
-        }
+            var requestMessage = new HttpRequestMessage(HttpMethod.Delete, uri);
 
-        public async Task<string> GetStringAsync(string uri, string authorizationToken = null, string authorizationMethod = "Bearer")
-        {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get,uri);
-
-            if (authorizationToken != null)
+            if (authorizationtoken != null)
             {
                 requestMessage.Headers.Authorization =
                     new System.Net.Http.Headers.AuthenticationHeaderValue
-                    (authorizationMethod, authorizationToken);
+                    (authorizationmethod, authorizationtoken);
+            }
+             return ( await _client.SendAsync(requestMessage));
+        }
+
+        public async Task<string> GetStringAsync(string uri, string authorizationtoken = null, string authorizationMethod = "Bearer")
+        {
+            var requestMessage = new HttpRequestMessage(HttpMethod.Get,uri);
+
+            if (authorizationtoken != null)
+            {
+                requestMessage.Headers.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue
+                    (authorizationMethod, authorizationtoken);
             }
             var response= await _client.SendAsync(requestMessage);
             return await response.Content.ReadAsStringAsync();
         }
 
-        public Task<HttpResponseMessage> PostAsync<T>(string uri, T item, string authorizationtodekn = null, string authorizationmethod = "Bearer")
+        public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item, string authorizationtoken = null, string authorizationmethod = "Bearer")
         {
-            throw new NotImplementedException();
+            return await DoPostPutAsync(uri, HttpMethod.Post, item, authorizationtoken, authorizationmethod);
+            
         }
 
-        public Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string authorizationtodekn = null, string authorizationmethod = "Bearer")
+        public async Task<HttpResponseMessage> PutAsync<T>(string uri, T item, string authorizationtoken = null, string authorizationmethod = "Bearer")
         {
-            throw new NotImplementedException();
+            return await DoPostPutAsync(uri, HttpMethod.Put, item, authorizationtoken, authorizationmethod);
+        }
+
+
+
+        private async Task<HttpResponseMessage> DoPostPutAsync<T>(string uri, HttpMethod method, T item, string authorizationtoken = null, string authorizationmethod = "Bearer")
+        {
+            if (method != HttpMethod.Put && method != HttpMethod.Post)
+            {
+                throw new ArgumentException("Value must be either put or post", nameof(method));
+            }
+            var requestMessage = new HttpRequestMessage(method, uri);
+            requestMessage.Content = new StringContent(JsonConvert.SerializeObject(item), System.Text.Encoding.UTF8, "application/json");
+
+            if (authorizationtoken != null)
+            {
+                requestMessage.Headers.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue
+                    (authorizationmethod, authorizationtoken);
+            }
+            var response= await _client.SendAsync(requestMessage);
+            if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+            {
+                throw new HttpRequestException();
+            }
+            return response;
         }
     }
 }
