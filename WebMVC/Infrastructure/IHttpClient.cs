@@ -12,14 +12,14 @@ namespace WebMVC.Infrastructure
             string authorizationmethod="Bearer");
 
         Task<HttpResponseMessage> PostAsync <T>(string uri, T item,
-            string authorizationtoken = null,
+            string authorizationtodekn = null,
             string authorizationmethod = "Bearer");
 
         Task<HttpResponseMessage> PutAsync<T>(string uri, T item,
             string authorizationtoken = null,
             string authorizationmethod = "Bearer");
 
-        Task<HttpResponseMessage> DeleteAsync<T>(string uri,
+        Task<HttpResponseMessage> DeleteAsync(string uri,
             string authorizationtoken = null,
             string authorizationmethod = "Bearer");
     }

@@ -12,9 +12,9 @@ namespace WebMVC.Services
     {
         Task<Cart> GetCart(ApplicationUser user);
         Task<Cart> UpdateCart(Cart cart);
-        Task<Cart> SetQuantities (Cart cart);
+        Task<Cart> SetQuantities (ApplicationUser user, Dictionary<string,int> quantities);
 
-        Task AddItemToCart(ApplicationUser user, Dictionary<string, int> quantities);
+        Task AddItemToCart(ApplicationUser user, CartItem product);
 
         Order MapCartToOrder(Cart cart);
         Task ClearCart(ApplicationUser user);
