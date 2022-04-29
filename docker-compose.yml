@@ -128,7 +128,7 @@ services:
     depends_on:
      - eventcatalogapi
      - tokenserver
-     - cart
+     - cartapi
      - order
   
   tokenserver:
