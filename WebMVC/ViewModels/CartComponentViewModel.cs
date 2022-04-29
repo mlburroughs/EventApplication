@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebMVC.ViewModels
 {
-    public class CartComponentViewModdel
+    public class CartComponentViewModel
     {
         public int ItemsInCart { get; set; }
         public decimal TotalCost { get; set; }

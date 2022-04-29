@@ -19,7 +19,7 @@ namespace WebMvc.ViewComponents
         {
 
             
-            var vm = new CartComponentViewModdel();
+            var vm = new CartComponentViewModel();
             try
             {
                 var cart = await _cartSvc.GetCart(user);
