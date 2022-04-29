@@ -88,7 +88,7 @@ services:
       - tokenserver
       - ordersqlserver
 
-  cartapi:
+  cart:
      image: events/cartapi
      build:
       context: .\EventCatalogAPI
@@ -116,6 +116,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       EventCatalogUrl: http://eventcatalogapi
       OrderUrl: http://order
+      CartUrl: http://cart
       IdentityUrl: http://192.168.86.29:7800
       CallBackUrl: http://localhost:7500
       StripePublicKey: pk_test_51KtHsOIDh35UR516CGbTXBqrF5dHB4oDgSsaTRN4XqyhlrFGHxZ1Dt5gUaX6KbOpOGSIMtMzxZSHvvLRcTcJAyRY00EBaqy2bV
@@ -128,7 +129,7 @@ services:
     depends_on:
      - eventcatalogapi
      - tokenserver
-     - cartapi
+     - cart
      - order
   
   tokenserver:
