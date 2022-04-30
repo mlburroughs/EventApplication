@@ -49,7 +49,7 @@ namespace WebMVC.Controllers
                     };
                     await _cartService.AddItemToCart(user, product);
                 }
-                return RedirectToAction("Index", "Catalog");
+                return RedirectToAction("Index", "EventCatalog");
             }
             catch (BrokenCircuitException)
 
@@ -58,7 +58,7 @@ namespace WebMVC.Controllers
                 HandleBrokenCircuitException();
             }
 
-            return RedirectToAction("Index", "Catalog");
+            return RedirectToAction("Index", "EventCatalog");
         }
             private void HandleBrokenCircuitException()
             {
