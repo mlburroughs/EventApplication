@@ -77,7 +77,24 @@ namespace WebMVC.Services
 
         public Order MapCartToOrder(Cart cart)
         {
-            throw new NotImplementedException();
+            var order = new Order();
+            order.OrderTotal = 0;
+
+            cart.Items.ForEach(x =>
+            {
+                order.OrderItems.Add(new OrderItem()
+                {
+                    ProductId = int.Parse(x.ProductId),
+
+                    PictureUrl = x.PictureUrl,
+                    ProductName = x.ProductName,
+                    Units = x.Quantity,
+                    UnitPrice = x.UnitPrice
+                });
+                order.OrderTotal += (x.Quantity * x.UnitPrice);
+            });
+
+            return order;
         }
 
 
