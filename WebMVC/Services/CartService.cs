@@ -21,6 +21,7 @@ namespace WebMVC.Services
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly string _baseUrl;
 
+
         public CartService(IConfiguration config , IHttpClient client, IHttpContextAccessor httpContextAccessor )
         {
             _config = config;
@@ -100,7 +101,7 @@ namespace WebMVC.Services
 
         public async Task<Cart> UpdateCart(Cart cart)
         {
-            var token =await  GetUserToken();
+            var token = await  GetUserToken();
             var updateBasketUrl = APIPaths.Basket.UpdateBasket(_baseUrl);
             var response= await _apiclient.PostAsync(updateBasketUrl, cart, token);
 
@@ -112,7 +113,7 @@ namespace WebMVC.Services
         private async Task<string> GetUserToken()
         {
             var context = _httpContextAccessor.HttpContext;
-            return await context.GetTokenAsync("access token");
+            return await context.GetTokenAsync("access_token");
         }
 
         public async Task<Cart> SetQuantities(ApplicationUser user, Dictionary<string, int> quantities)
