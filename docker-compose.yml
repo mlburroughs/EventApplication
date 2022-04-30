@@ -102,7 +102,7 @@ services:
       - ordersqlserver
       - rabbitmq
 
-  cartapi:
+  cart:
      image: events/cartapi
      build:
       context: .\EventCatalogAPI
@@ -132,6 +132,7 @@ services:
       EventCatalogUrl: http://eventcatalogapi
       OrderUrl: http://order
       IdentityUrl: http://192.168.1.102:7800
+      CartUrl: http://cart
       CallBackUrl: http://localhost:7500
       StripePublicKey: pk_test_51KtHsOIDh35UR516CGbTXBqrF5dHB4oDgSsaTRN4XqyhlrFGHxZ1Dt5gUaX6KbOpOGSIMtMzxZSHvvLRcTcJAyRY00EBaqy2bV
       StripePrivateKey: sk_test_51KtHsOIDh35UR516bV9GPbBwMIOXH3oP2BYhNcwT4aYeLnjwoxdHw93TldnXmJ6KiaBmRkuz8aoFe2YKeW8Yl4vY00wHNP78mx
@@ -143,7 +144,7 @@ services:
     depends_on:
      - eventcatalogapi
      - tokenserver
-     - cartapi
+     - cart
      - order
   
   tokenserver:

@@ -1,9 +1,11 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - WebMvc</title>
+    <title>@ViewData["Title"] - WebMVC</title>
 
     <environment names="Development,Staging,Production">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -23,11 +25,11 @@
 
     </environment>
     @*<environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>*@
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        </environment>*@
 </head>
 <body>
     <header class="navbar navbar-light navbar-static-top">
@@ -40,15 +42,15 @@
                         </a>
                     </a>
                 </section>
-               @*@await Html.PartialAsync("_LoginPartial")*@
+                @await Html.PartialAsync("_LoginPartial")
             </article>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    
+
                     <li><a asp-area="" asp-controller="EventCatalog" asp-action="About">About</a></li>
-                   
+
                 </ul>
-                
+
             </div>
         </div>
     </header>
@@ -67,7 +69,7 @@
             </div>
         </footer>
     </div>
-   
+
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -93,3 +95,16 @@
     @RenderSection("Scripts", required: false)
 </body>
 </html>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Loading complete
