@@ -55,7 +55,7 @@ namespace WebMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult>AddToCart(EventItem eventDetails)
+        public async Task<IActionResult> AddToCart(EventItem eventDetails)
         {
             try
             {
