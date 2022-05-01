@@ -82,11 +82,11 @@ services:
   order:
     image: events/orderapi
     build:
-      context: ./OrderAPI
+      context: .\OrderAPI
       dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      IdentityUrl: http://10.0.0.136:7800
+      IdentityUrl: http://192.168.86.29:7800
       DatabaseServer: ordersqlserver
       DatabaseName: OrdersDb
       DatabaseUser: sa
@@ -165,11 +165,3 @@ services:
       - frontend
     depends_on:
       - tokensqlserver
-
-       
-
-
-
-       
-   
-     
