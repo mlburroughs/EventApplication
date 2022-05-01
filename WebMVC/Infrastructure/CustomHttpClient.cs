@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace WebMVC.Infrastructure
@@ -55,7 +57,7 @@ namespace WebMVC.Infrastructure
             return (await _client.SendAsync(requestMessage));
         }
 
-        private async Task<HttpResponseMessage> DoPostPutAsync<T>(string uri, HttpMethod method, T item, string authorizationtoken = null, string authorizationmethod = "Bearer")
+        private async Task<HttpResponseMessage> DoPostPutAsync<T>(string uri, HttpMethod method, T item, string authorizationtoken, string authorizationmethod)
         {
             if (method != HttpMethod.Put && method != HttpMethod.Post)
             {
@@ -67,11 +69,11 @@ namespace WebMVC.Infrastructure
             if (authorizationtoken != null)
             {
                 requestMessage.Headers.Authorization =
-                    new System.Net.Http.Headers.AuthenticationHeaderValue
+                    new AuthenticationHeaderValue
                     (authorizationmethod, authorizationtoken);
             }
             var response= await _client.SendAsync(requestMessage);
-            if (response.StatusCode == System.Net.HttpStatusCode.InternalServerError)
+            if (response.StatusCode == HttpStatusCode.InternalServerError)
             {
                 throw new HttpRequestException();
             }

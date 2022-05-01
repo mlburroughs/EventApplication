@@ -30,7 +30,7 @@ namespace WebMVC.Services
             _baseUrl = $"{config["CartUrl"]}/api/Cart";
 
         }
-        public async  Task AddItemToCart(ApplicationUser user, CartItem product)
+        public async Task AddItemToCart(ApplicationUser user, CartItem product)
         {
             var cart = await GetCart(user);
             var basketItem = cart.Items.Where(p => p.ProductId == product.ProductId).FirstOrDefault();
