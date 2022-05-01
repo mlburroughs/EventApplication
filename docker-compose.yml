@@ -82,7 +82,7 @@ services:
   order:
     image: events/orderapi
     build:
-      context: ./OrderAPI
+      context: .\OrderAPI
       dockerfile: Dockerfile
     environment:
       ASPNETCORE_ENVIRONMENT: Development
@@ -165,11 +165,3 @@ services:
       - frontend
     depends_on:
       - tokensqlserver
-
-       
-
-
-
-       
-   
-     

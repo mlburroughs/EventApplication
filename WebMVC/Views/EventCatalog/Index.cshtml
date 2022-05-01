@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "EventCatalog";
     @model WebMVC.ViewModels.EventCatalogIndexViewModel
 }
@@ -11,7 +12,7 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="~/images/frontpagelong.png" alt="ASP.NET" class="img-responsive" />
+            <img src="~/images/banner.png" alt="ASP.NET" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
                     Create amazing events!
@@ -19,7 +20,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="~/images/frontpage2long.png" alt="Visual Studio" class="img-responsive" />
+            <img src="~/images/banner-2.png" alt="Visual Studio" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
                     Find your next event!
@@ -27,7 +28,7 @@
             </div>
         </div>
         <div class="item">
-            <img src="~/images/frontpage3long.png" alt="Package Management" class="img-responsive" />
+            <img src="~/images/banner-3.png" alt="Package Management" class="img-responsive" />
             <div class="carousel-caption" role="option">
                 <p>
                     Get back out there!
@@ -49,10 +50,10 @@
 <section class="esh-catalog-filters">
     <div class="container">
         <form asp-action="Index" asp-controller="EventCatalog" method="post">
-            <label class="esh-catalog-label" data-title="type">
+            <label class="esh-catalog-label" data-title="brand">
                 <select asp-for="@Model.TypeFilterApplied" asp-items="@Model.EventTypes" class="esh-catalog-filter"></select>
             </label>
-            <label class="esh-catalog-label" data-title="category">
+            <label class="esh-catalog-label" data-title="type">
                 <select asp-for="@Model.CategoryFilterApplied" asp-items="@Model.EventCategories" class="esh-catalog-filter"></select>
             </label>
             <label class="esh-catalog-label" data-title="organizer">
@@ -62,6 +63,7 @@
                 <select asp-for="@Model.CityFilterApplied" asp-items="@Model.EventMetroCities" class="esh-catalog-filter"></select>
             </label>
             <input class="esh-catalog-send" type="image" src="~/images/arrow-right.svg" />
+            
         </form>
     </div>
 </section>
@@ -83,8 +85,9 @@
     }
     else
     {
-        <div class="h5">
+        <div class="esh-catalog-items row">
             THERE ARE NO RESULTS THAT MATCH YOUR SEARCH
         </div>
     }
 </div>
+
