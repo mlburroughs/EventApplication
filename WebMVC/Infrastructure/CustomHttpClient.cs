@@ -26,7 +26,7 @@ namespace WebMVC.Infrastructure
             if (authorizationtoken != null)
             {
                 requestMessage.Headers.Authorization =
-                    new System.Net.Http.Headers.AuthenticationHeaderValue
+                    new AuthenticationHeaderValue
                     (authorizationMethod, authorizationtoken);
             }
             var response= await _client.SendAsync(requestMessage);
@@ -51,7 +51,7 @@ namespace WebMVC.Infrastructure
             if (authorizationtoken != null)
             {
                 requestMessage.Headers.Authorization =
-                    new System.Net.Http.Headers.AuthenticationHeaderValue
+                    new AuthenticationHeaderValue
                     (authorizationmethod, authorizationtoken);
             }
             return (await _client.SendAsync(requestMessage));
