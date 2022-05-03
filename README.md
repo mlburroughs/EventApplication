@@ -25,7 +25,7 @@ Sprint 1:
 
 3- Run on Firefox only 
 
-Website Link: http://localhost:7500
+WebMVC Client Link: http://localhost:7500
 
 Dummy Login Information:
 
