@@ -106,12 +106,14 @@ namespace EventCatalogAPI.Controllers
                 query = query.Where(c => c.EventOrganizerId == eventOrganizerId);
             }
             //var itemsCount = _context.Events.LongCountAsync();
+            var itemsForCount = await query.ToListAsync();
+            var itemsCount = itemsForCount.Count;
+
             var items = await query
                                 .OrderBy(c => c.Name)
                                 .Skip(pageIndex * pageSize)
                                 .Take(pageSize)
                                 .ToListAsync();
-            var itemsCount = items.Count;
 
             items = ChangePictureUrl(items);
 
