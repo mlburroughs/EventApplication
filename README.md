@@ -1,4 +1,5 @@
 # Evento
+
 Evento is an event management and ticketing application. This service allows users to browse, register and create local events across the United States.
 
 Upon opening the application, the user is presented with the first page of all events. Through a series of filters that include city, the user is able query according to city, event type, event category, and organizer. The user is able to create a login profile that is used in the internal identity verfication service.
@@ -15,18 +16,17 @@ Sprint 1:
 
 
 ## Usage
+
 1- Clone the repository to your local Visual Studio 
 2- Navigate to this docker-compose.yml file 
 3- Update the IdentityUrl with your own url
 3- Run on Firefox only 
 
-Website Link:http://localhost:7500/EventCatalog/
+Website Link: http://localhost:7500
+
+Dummy Login Information:
 Email: me@myemail.com
 Password: P@ssword1
-
-Known Issues:
--Change the Products word in pagination to Events
--Correct page number after apply filters
 
 ## Authors
 
