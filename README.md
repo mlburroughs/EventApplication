@@ -18,8 +18,11 @@ Sprint 1:
 ## Usage
 
 1- Clone the repository to your local Visual Studio 
+
 2- Navigate to this docker-compose.yml file 
+
 3- Update the IdentityUrl with your own url
+
 3- Run on Firefox only 
 
 Website Link: http://localhost:7500
