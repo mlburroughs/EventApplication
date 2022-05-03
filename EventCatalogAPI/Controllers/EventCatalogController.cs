@@ -105,7 +105,7 @@ namespace EventCatalogAPI.Controllers
             {
                 query = query.Where(c => c.EventOrganizerId == eventOrganizerId);
             }
-            //var itemsCount = _context.Events.LongCountAsync();
+
             var itemsForCount = await query.ToListAsync();
             var itemsCount = itemsForCount.Count;
 
