@@ -84,10 +84,10 @@ namespace WebMVC.Controllers
 
             return RedirectToAction("Index", "EventCatalog");
         }
-            private void HandleBrokenCircuitException()
-            {
-                TempData["BasketInoperativeMsg"] = "cart Service is inoperative, please try later on. (Business Msg Due to Circuit-Breaker)";
-            }
+        private void HandleBrokenCircuitException()
+        {
+            TempData["BasketInoperativeMsg"] = "Cart Service is inoperative, please try later on. (Business Msg Due to Circuit-Breaker)";
+        }
         
     }
 }
