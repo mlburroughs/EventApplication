@@ -12,6 +12,10 @@
                    asp-controller="EventCatalog"
                    asp-action="Index"
                    asp-route-page="@(Model.ActualPage -1)"
+                   asp-route-typeFilterApplied="@(Model.TypeFilterApplied)"
+                   asp-route-categoryFilterApplied="@(Model.CategoryFilterApplied)"
+                   asp-route-organizerFilterApplied="@(Model.OrganizerFilterApplied)"
+                   asp-route-cityFilterApplied="@(Model.CityFilterApplied)"
                    aria-label="Previous">
                     Previous
                 </a>
@@ -25,6 +29,10 @@
                    asp-controller="EventCatalog"
                    asp-action="Index"
                    asp-route-page="@(Model.ActualPage + 1)"
+                   asp-route-typeFilterApplied="@(Model.TypeFilterApplied)"
+                   asp-route-categoryFilterApplied="@(Model.CategoryFilterApplied)"
+                   asp-route-organizerFilterApplied="@(Model.OrganizerFilterApplied)"
+                   asp-route-cityFilterApplied="@(Model.CityFilterApplied)"
                    aria-label="Next">
                     Next
                 </a>
