@@ -105,12 +105,13 @@ namespace EventCatalogAPI.Controllers
             {
                 query = query.Where(c => c.EventOrganizerId == eventOrganizerId);
             }
-            var itemsCount = _context.Events.LongCountAsync();
+            //var itemsCount = _context.Events.LongCountAsync();
             var items = await query
                                 .OrderBy(c => c.Name)
                                 .Skip(pageIndex * pageSize)
                                 .Take(pageSize)
                                 .ToListAsync();
+            var itemsCount = items.Count;
 
             items = ChangePictureUrl(items);
 
@@ -118,7 +119,7 @@ namespace EventCatalogAPI.Controllers
             {
                 PageIndex = pageIndex,
                 PageSize = items.Count,
-                Count = itemsCount.Result,
+                Count = itemsCount,
                 Data = items
             };
             return Ok(model);
