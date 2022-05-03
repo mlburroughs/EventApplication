@@ -25,6 +25,7 @@ Sprint 1:
 Website Link: http://localhost:7500
 
 Dummy Login Information:
+
 Email: me@myemail.com
 Password: P@ssword1
 
