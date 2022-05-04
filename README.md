@@ -8,6 +8,9 @@ This project utilizes microservices (catalog, token, cart, order) and a WebMVC c
 
 Below are video demonstrations of project milestones:
 
+Final Demo:
+[![Watch the video](https://img.youtube.com/vi/eh_Bo91RnCA/maxresdefault.jpg)](https://youtu.be/eh_Bo91RnCA)
+
 Sprint 2:
 [![Watch the video](https://img.youtube.com/vi/yYXMMTGsRVE/maxresdefault.jpg)](https://youtu.be/yYXMMTGsRVE)
 
